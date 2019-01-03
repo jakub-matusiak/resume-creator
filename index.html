@@ -7,34 +7,66 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Resume Creator</div>
-    </header>
-    <main>
-        <form>
-            <fieldset>
-                <legend>Personal Details</legend>
-                <label for="first_name">
-                    <div>First name:</div>
-                    <input type="text" id="first_name">
-                </label>
-                <label for="last_name">
-                    <div>Last name:</div>
-                    <input type="text" id="last_name">
-                </label>
-                <label for="email">
-                    <div>E-mail:</div>
-                    <input type="text" id="email">
-                </label>
-                <label for="phone">
-                    <div>Phone:</div>
-                    <input type="text" id="phone">
-                </label>
-            </fieldset>
-        </form>
-    </main>
-    <footer>
-        <div class="author">Designed by Jakub Matusiak</div>
-    </footer>
+    <div class="wrapper">
+        <header class="page-header">
+            <div class="logo">Resume Creator</div>
+        </header>
+        <main class="page-content">
+            <form>
+                <fieldset>
+                    <legend class="resume-heading">Personal Details</legend>
+                    <label for="first_name">
+                        <div>First name:</div>
+                        <input type="text" id="first_name">
+                    </label>
+                    <label for="last_name">
+                        <div>Last name:</div>
+                        <input type="text" id="last_name">
+                    </label>
+                    <label for="email">
+                        <div>E-mail:</div>
+                        <input type="text" id="email">
+                    </label>
+                    <label for="phone">
+                        <div>Phone:</div>
+                        <input type="text" id="phone">
+                    </label>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend class="resume-heading">Professional Summary</legend>
+                    <textarea class="resume-summary"></textarea>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend class="resume-heading">Websites &amp; Social Links</legend>
+                    <div class="resume-add-btn"><i class="fas fa-plus"></i>Add link</div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend class="resume-heading">Employment history</legend>
+                    <div class="resume-add-btn"><i class="fas fa-plus"></i>Add employment</div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend class="resume-heading">Education</legend>
+                    <div class="resume-add-btn"><i class="fas fa-plus"></i>Add education</div>
+                </fieldset>
+            </form>
+            <form>
+                <fieldset>
+                    <legend class="resume-heading">Skills</legend>
+                    <div class="resume-add-btn"><i class="fas fa-plus"></i>Add skill</div>
+                </fieldset>
+            </form>
+        </main>
+        <footer class="page-footer">
+            <div class="author">Designed by Jakub Matusiak</div>
+        </footer>
+    </div>
 </body>
 </html>
