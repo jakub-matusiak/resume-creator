@@ -15,7 +15,7 @@ body {
 
 .page-header {
     background-color: #6477e2;
-    width: 80%;
+    width: 60%;
     height: auto;
     margin: 0;
     padding: 10px;
@@ -29,14 +29,14 @@ body {
 
 .page-content {
     background-color: #94a1ed;
-    width: 80%;
+    width: 60%;
     margin: 0;
     padding: 10px;
 }
 
 .page-footer {
     background-color: #6477e2;
-    width: 80%;
+    width: 60%;
     height: auto;
     margin: 0;
     padding: 10px;
