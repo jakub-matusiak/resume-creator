@@ -34,14 +34,37 @@ body {
     padding: 10px;
 }
 
+.resume-heading {
+    font-size: 1.2em;
+}
+
+.resume-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.page-content form fieldset {
+    border: 0;
+}
+
+label {
+    font-size: 0.9em;
+    width: 150px;
+    margin: 0 5px;
+    padding: 0;
+}
+
+span, input, textarea {
+    width: 100%;
+}
+
 .page-footer {
     background-color: #6477e2;
     width: 60%;
     height: auto;
     margin: 0;
     padding: 10px;
-}
-
-.resume-heading {
-    font-size: 1.2em;
 }
