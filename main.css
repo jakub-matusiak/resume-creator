@@ -72,3 +72,55 @@ span, input, textarea {
     margin: 0;
     padding: 10px;
 }
+
+#resume-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    background: #545454;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    opacity: 1;
+}
+
+#layout {
+    position: relative;
+    background: #FFFFFF;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+#layout-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+#layout-heading {
+    font-size: 1.2em;
+    text-align: right;
+    width: 30%;
+    margin: 5px;
+    padding: 0;
+}
+
+.layout-cap {
+    font-size: 0.9em;
+    text-align: right;
+    width: 30%;
+    margin: 5px 10px;
+    padding: 0;
+}
+
+.layout-desc {
+    width: 70%;
+}
