@@ -47,9 +47,9 @@ generateBtn.addEventListener("click", function() {
     employmentDateDiv.textContent = jobStart1 + " - " + jobEnd1;
     educationDiv.textContent = degree1 + ", " + school1 + ", " + schoolCity1;
     educationDateDiv.textContent = schoolStart1 + " - " + schoolEnd1;
-    skillLabelDiv.textContent = skill1;
+    skillLabelDiv.textContent = skill1 + ":";
     skillDescDIv.textContent = skillDescription1;
-    linkLabelDiv.textContent = linkLabel1;
+    linkLabelDiv.textContent = linkLabel1 + ":";
     linkDiv.textContent = link1;
     
 }, false);
