@@ -1,13 +1,13 @@
 const generateBtn = document.getElementById("generate");
 
 generateBtn.addEventListener("click", function() {
-    let workplace = document.getElementById("workplace").value;
+    let jobTitle = document.getElementById("job-title").value;
     let firstName = document.getElementById("first-name").value;
     let lastName = document.getElementById("last-name").value;
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
     let professionalSummary = document.getElementById("professional-summary").value;
-    let jobTitle1 = document.getElementById("job-title-1").value;
+    let workplace1 = document.getElementById("workplace-1").value;
     let employer1 = document.getElementById("employer-1").value;
     let jobStart1 = document.getElementById("job-start-1").value;
     let jobEnd1 = document.getElementById("job-end-1").value;
