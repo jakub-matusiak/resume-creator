@@ -77,19 +77,13 @@ span, input, textarea {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    position: absolute;
     background: #545454;
-    top: 0;
-    left: 0;
     width: 100vw;
-    height: 100vh;
     margin: 0 auto;
     padding: 0;
-    opacity: 1;
 }
 
 #layout {
-    position: relative;
     background: #FFFFFF;
     width: 60%;
     margin: 0;
