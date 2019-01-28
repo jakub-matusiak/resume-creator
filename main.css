@@ -96,7 +96,7 @@ span, input, textarea {
     padding: 0;
 }
 
-#layout-row {
+.layout-row {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
@@ -104,7 +104,7 @@ span, input, textarea {
     padding: 0;
 }
 
-#layout-heading {
+.layout-heading {
     font-size: 1.2em;
     text-align: right;
     width: 30%;
