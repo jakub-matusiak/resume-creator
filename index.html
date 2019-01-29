@@ -9,169 +9,172 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="page-header">
-            <div class="logo">Resume Creator</div>
-        </header>
-        <main class="page-content">
-            <form>
-                <fieldset>
-                    <legend class="resume-heading">Personal Details</legend>
-                    <div class="resume-row">
-                        <label for="job-title">
-                            <span>Job title:</span>
-                            <input type="text" id="job-title">
-                        </label>
-                        <label for="photo">
-                            <span>Upload photo:</span>
-                            <input type="file" id="photo">
-                            <input type="submit" id="submit-photo">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="first_name">
-                            <span>First name:</span>
-                            <input type="text" id="first-name">
-                        </label>
-                        <label for="last_name">
-                            <span>Last name:</span>
-                            <input type="text" id="last-name">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="email">
-                            <span>E-mail:</span>
-                            <input type="text" id="email">
-                        </label>
-                        <label for="phone">
-                            <span>Phone:</span>
-                            <input type="text" id="phone">
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
-            <form>
-                <fieldset>
-                    <legend class="resume-heading">Professional Summary</legend>
-                    <div class="resume-row">
-                        <label for="resume-summary">
-                            <span>Description</span>
-                            <textarea id="professional-summary"></textarea>
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
-            <form>
-                <fieldset>
-                    <legend class="resume-heading">Websites &amp; Social Links</legend>
-                    <div class="resume-row">
-                        <label for="link-label-1">
-                            <span>Label:</span>
-                            <input type="text" id="link-label-1">
-                        </label>
-                        <label for="link-1">
-                            <span>Link:</span>
-                            <input type="text" id="link-1">
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
-            <form>
-                <fieldset>
-                    <legend class="resume-heading">Employment history</legend>
-                    <div class="resume-row">
-                        <label for="job-title-1">
-                            <span>Workplace:</span>
-                            <input type="text" id="workplace-1">
-                        </label>
-                        <label for="employer-1">
-                            <span>Employer:</span>
-                            <input type="text" id="employer-1">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="job-start-1">
-                            <span>Start date:</span>
-                            <input type="date" id="job-start-1">
-                        </label>
-                        <label for="job-end-1">
-                            <span>End date:</span>
-                            <input type="date" id="job-end-1">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="job-city-1">
-                            <span>City:</span>
-                            <input type="text" id="job-city-1">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="job-description-1">
-                            <span>Description</span>
-                            <textarea id="job-description-1"></textarea>
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
-            <form>
-                <fieldset>
-                    <legend class="resume-heading">Education</legend>
-                    <div class="resume-row">
-                        <label for="school-1">
-                            <span>School:</span>
-                            <input type="text" id="school-1">
-                        </label>
-                        <label for="degree-1">
-                            <span>Degree:</span>
-                            <input type="text" id="degree-1">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="school-start-1">
-                            <span>Start date:</span>
-                            <input type="date" id="school-start-1">
-                        </label>
-                        <label for="school-end-1">
-                            <span>End date:</span>
-                            <input type="date" id="school-end-1">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="school-city-1">
-                            <span>City:</span>
-                            <input type="text" id="school-city-1">
-                        </label>
-                    </div>
-                    <div class="resume-row">
-                        <label for="school-description-1">
-                            <span>Description</span>
-                            <textarea id="school-description-1"></textarea>
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
-            <form>
-                <fieldset>
-                    <legend class="resume-heading">Skills</legend>
-                    <div class="resume-row">
-                        <label for="skill-1">
-                            <span>Skill:</span>
-                            <input type="text" id="skill-1">
-                        </label>
-                        <label for="skill-description-1">
-                            <span>Description:</span>
-                            <textarea id="skill-description-1"></textarea>
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
-            <button id="generate">Generate</button>
-        </main>
-        <footer class="page-footer">
-            <div class="author">Designed by Jakub Matusiak</div>
-        </footer>
-    </div>
-    <div id="resume-preview">
-        <div id="layout"></div>
+        <div class="resume">
+            <header class="page-header">
+                <div class="logo">Resume Creator</div>
+            </header>
+            <main class="page-content">
+                <form>
+                    <fieldset>
+                        <legend class="resume-heading">Personal Details</legend>
+                        <div class="resume-row">
+                            <label for="job-title">
+                                <span>Job title:</span>
+                                <input type="text" id="job-title">
+                            </label>
+                            <label for="photo">
+                                <span>Upload photo:</span>
+                                <input type="file" id="photo">
+                                <input type="submit" id="submit-photo">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="first_name">
+                                <span>First name:</span>
+                                <input type="text" id="first-name">
+                            </label>
+                            <label for="last_name">
+                                <span>Last name:</span>
+                                <input type="text" id="last-name">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="email">
+                                <span>E-mail:</span>
+                                <input type="text" id="email">
+                            </label>
+                            <label for="phone">
+                                <span>Phone:</span>
+                                <input type="text" id="phone">
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <legend class="resume-heading">Professional Summary</legend>
+                        <div class="resume-row">
+                            <label for="resume-summary">
+                                <span>Description</span>
+                                <textarea id="professional-summary"></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <legend class="resume-heading">Websites &amp; Social Links</legend>
+                        <div class="resume-row">
+                            <label for="link-label-1">
+                                <span>Label:</span>
+                                <input type="text" id="link-label-1">
+                            </label>
+                            <label for="link-1">
+                                <span>Link:</span>
+                                <input type="text" id="link-1">
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <legend class="resume-heading">Employment history</legend>
+                        <div class="resume-row">
+                            <label for="job-title-1">
+                                <span>Workplace:</span>
+                                <input type="text" id="workplace-1">
+                            </label>
+                            <label for="employer-1">
+                                <span>Employer:</span>
+                                <input type="text" id="employer-1">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="job-start-1">
+                                <span>Start date:</span>
+                                <input type="date" id="job-start-1">
+                            </label>
+                            <label for="job-end-1">
+                                <span>End date:</span>
+                                <input type="date" id="job-end-1">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="job-city-1">
+                                <span>City:</span>
+                                <input type="text" id="job-city-1">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="job-description-1">
+                                <span>Description</span>
+                                <textarea id="job-description-1"></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <legend class="resume-heading">Education</legend>
+                        <div class="resume-row">
+                            <label for="school-1">
+                                <span>School:</span>
+                                <input type="text" id="school-1">
+                            </label>
+                            <label for="degree-1">
+                                <span>Degree:</span>
+                                <input type="text" id="degree-1">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="school-start-1">
+                                <span>Start date:</span>
+                                <input type="date" id="school-start-1">
+                            </label>
+                            <label for="school-end-1">
+                                <span>End date:</span>
+                                <input type="date" id="school-end-1">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="school-city-1">
+                                <span>City:</span>
+                                <input type="text" id="school-city-1">
+                            </label>
+                        </div>
+                        <div class="resume-row">
+                            <label for="school-description-1">
+                                <span>Description</span>
+                                <textarea id="school-description-1"></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <fieldset>
+                        <legend class="resume-heading">Skills</legend>
+                        <div class="resume-row">
+                            <label for="skill-1">
+                                <span>Skill:</span>
+                                <input type="text" id="skill-1">
+                            </label>
+                            <label for="skill-description-1">
+                                <span>Description:</span>
+                                <textarea id="skill-description-1"></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+                </form>
+                <button id="generate">Generate</button>
+            </main>
+            <footer class="page-footer">
+                <div class="author">Designed by Jakub Matusiak</div>
+            </footer>
+        </div>
+        <div class="resume-preview">
+            <h3 class="resume-preview-heading">Resume preview</h3>
+            <div id="layout"></div>
+        </div>
     </div>
 <script src="main.js" type="text/javascript"></script>
 </body>
