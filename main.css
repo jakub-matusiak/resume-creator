@@ -9,6 +9,13 @@ body {
 
 .wrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.resume {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -72,12 +79,11 @@ span, input, textarea {
     padding: 10px;
 }
 
-#resume-preview {
+.resume-preview {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: #545454;
     width: 100vw;
     margin: 0 auto;
     padding: 0;
@@ -85,8 +91,11 @@ span, input, textarea {
 
 #layout {
     background: #FFFFFF;
-    width: 60%;
-    margin: 0;
+    border: 1px solid #545454;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    width: 80%;
+    min-height: 100vh;
+    margin: 25px;
     padding: 0;
 }
 
@@ -101,7 +110,7 @@ span, input, textarea {
 .layout-heading {
     font-size: 1.2em;
     text-align: right;
-    width: 30%;
+    width: 40%;
     margin: 5px;
     padding: 0;
 }
@@ -109,11 +118,11 @@ span, input, textarea {
 .layout-cap {
     font-size: 0.9em;
     text-align: right;
-    width: 30%;
+    width: 40%;
     margin: 5px 10px;
     padding: 0;
 }
 
 .layout-desc {
-    width: 70%;
+    width: 60%;
 }
