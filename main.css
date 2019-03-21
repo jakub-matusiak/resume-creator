@@ -19,27 +19,27 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
     width: 100vw;
 }
 
 .page-header {
-    background-color: #6477e2;
-    width: 60%;
+    background-color: #838383;
+    width: 100vw;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 10px;
 }
 
 .page-header .logo {
     font-size: 2em;
-    margin: 0;
+    margin-left: 10vw;
     padding: 0;
 }
 
 .page-content {
-    background-color: #94a1ed;
-    width: 60%;
+    background-color: #FFFFFF;
+    min-width: 35vw;
     margin: 0;
     padding: 10px;
 }
@@ -72,11 +72,16 @@ span, input, textarea {
 }
 
 .page-footer {
-    background-color: #6477e2;
-    width: 60%;
+    background-color: #838383;
+    width: 100vw;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     padding: 10px;
+}
+
+.author {
+    margin-left: 10vw;
+    padding: 0;
 }
 
 .resume-preview {
@@ -93,7 +98,7 @@ span, input, textarea {
     background: #FFFFFF;
     border: 1px solid #545454;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
-    width: 80%;
+    min-width: 35vw;
     min-height: 100vh;
     margin: 25px;
     padding: 0;
