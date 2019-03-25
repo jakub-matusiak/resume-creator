@@ -54,12 +54,13 @@ body {
     padding: 5px;
 }
 
-.page-content form fieldset {
+fieldset {
     border: 0;
 }
 
 label {
-    font-size: 0.9em;
+    font-size: 0.7em;
+    color: #838383;
     width: 150px;
     margin: 0 5px;
     padding: 0;
@@ -69,17 +70,12 @@ span, input, textarea {
     width: 100%;
 }
 
-.page-footer {
-    background-color: #838383;
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
+#photo {
+    border: 0;
 }
 
-.author {
-    margin-left: 10vw;
-    padding: 0;
+input, textarea {
+    border: 1px solid #CCCCCC;
 }
 
 .resume-preview {
