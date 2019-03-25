@@ -96,9 +96,8 @@ input, textarea {
 
 #layout {
     background: #FFFFFF;
-    border: 1px solid #545454;
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
-    min-width: 35vw;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    width: 80%;
     min-height: 100vh;
     margin: 25px;
     padding: 0;
