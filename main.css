@@ -13,30 +13,32 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .resume {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    min-width: 340px;
+    width: 40%;
     margin: 0;
-    width: 100vw;
+    padding: 0;
 }
 
 .page-header {
     background-color: #838383;
     width: 100vw;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     padding: 10px;
 }
 
 .page-header .logo {
     font-size: 2em;
-    margin-left: 10vw;
-    padding: 0;
-}
 
 .page-content {
     background-color: #FFFFFF;
@@ -90,8 +92,14 @@ span, input, textarea {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 100vw;
-    margin: 0 auto;
+    min-width: 660px;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+}
+
+.resume-preview-heading {
+    margin: 0;
     padding: 0;
 }
 
