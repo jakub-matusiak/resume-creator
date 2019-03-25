@@ -48,7 +48,10 @@ body {
 }
 
 .resume-heading {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    color: #769BFF;
+    margin: 0;
+    padding: 0;
 }
 
 .resume-row {
@@ -134,4 +137,31 @@ input, textarea {
 
 .layout-desc {
     width: 60%;
+}
+
+#generate {
+    background: #e7e7e7;
+    color: #769BFF;
+    font-size: 0.7em;
+    font-weight: 200;
+    text-transform: uppercase;
+    border: 0;
+    width: 75px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.page-footer {
+    background-color: #838383;
+    width: 100vw;
+    height: auto;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+}
+
+.author {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
 }
