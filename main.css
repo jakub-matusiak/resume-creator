@@ -30,9 +30,7 @@ body {
 }
 
 .page-header {
-    background-color: #838383;
-    width: 100vw;
-    height: auto;
+    width: 960px;
     margin: 0 auto 20px auto;
     padding: 10px;
 }
@@ -154,7 +152,7 @@ input, textarea {
 
 .page-footer {
     background-color: #838383;
-    width: 100vw;
+    width: 960px;
     height: auto;
     margin: 10px auto 0 auto;
     padding: 10px;
