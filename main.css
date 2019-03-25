@@ -39,12 +39,7 @@ body {
 
 .page-header .logo {
     font-size: 2em;
-
-.page-content {
-    background-color: #FFFFFF;
-    min-width: 35vw;
-    margin: 0;
-    padding: 10px;
+    padding: 0;
 }
 
 .resume-heading {
