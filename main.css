@@ -37,6 +37,11 @@ body {
     padding: 10px;
 }
 
+.container {
+    background-color: #838383;
+    width: 100%;
+}
+
 .page-header .logo {
     font-size: 2em;
     padding: 0;
