@@ -1,6 +1,5 @@
 const generateBtn = document.getElementById("generate");
-
-generateBtn.addEventListener("click", function() {
+const generateFn = () => {
     let jobTitle = document.getElementById("job-title").value;
     let firstName = document.getElementById("first-name").value;
     let lastName = document.getElementById("last-name").value;
@@ -202,4 +201,6 @@ generateBtn.addEventListener("click", function() {
         let skillsDiv = document.getElementById("links-desc");
         skillsDiv.textContent = link1;
     }
-}, false);
+}
+
+generateBtn.addEventListener("click", generateFn, false);
