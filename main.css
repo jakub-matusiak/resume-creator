@@ -182,3 +182,33 @@ input, textarea {
     margin: 0;
     padding: 0;
 }
+
+@media print {
+    .container,
+    .resume,
+    .resume-preview-heading {
+        display: none;
+    }
+
+    .resume-preview {
+        width: 100%;
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #layout {
+        width: 100%;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .layout-heading,
+    .layout-cap {
+        width: 30%;
+    }
+
+    .layout-desc {
+        width: 70%;
+    }
+}
