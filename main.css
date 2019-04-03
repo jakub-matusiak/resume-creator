@@ -209,4 +209,8 @@ input, textarea {
     .layout-desc {
         width: 70%;
     }
+
+    #print {
+        display: none;
+    }
 }
