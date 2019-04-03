@@ -1,4 +1,5 @@
 const generateBtn = document.getElementById("generate");
+const printBtn = document.getElementById("print");
 const generateFn = () => {
     let jobTitle = document.getElementById("job-title").value;
     let firstName = document.getElementById("first-name").value;
@@ -203,4 +204,9 @@ const generateFn = () => {
     }
 }
 
+const printFn = () => {
+    window.print();
+}
+
+printBtn.addEventListener("click", printFn, false);
 generateBtn.addEventListener("click", generateFn, false);
