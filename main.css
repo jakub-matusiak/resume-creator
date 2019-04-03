@@ -156,17 +156,15 @@ input, textarea {
     width: 60%;
 }
 
-#generate {
+.button {
     background: #e7e7e7;
     color: #769BFF;
     font-size: 0.7em;
     font-weight: 200;
     text-transform: uppercase;
     border: 0;
-    width: 75px;
-    height: 20px;
     margin: 0;
-    padding: 0;
+    padding: 5px 10px;
 }
 
 .page-footer {
