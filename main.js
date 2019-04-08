@@ -25,180 +25,182 @@ const generateFn = () => {
     let link1 = document.getElementById("link-1").value;
     
     if(firstName != "" && lastName != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newH2 = document.createElement("h2");
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "name-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newH2);
-        newH2.id = "name-label";
-        let nameDiv = document.getElementById("name-label");
+        let newP = document.createElement("p");
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "name-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newP);
+        newP.id = "name-cap";
+        newP.classList.add("resume-preview__heading--name");
+        let nameDiv = document.getElementById("name-cap");
         nameDiv.textContent = firstName + " " + lastName;
     }
     
     if(jobTitle != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newH3 = document.createElement("h3");
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "job-title-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newH3);
-        newH3.id = "job-title-label";
-        let jobTitleDiv = document.getElementById("job-title-label");
+        let newP = document.createElement("p");
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "job-title-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newP);
+        newP.id = "job-title-cap";
+        newP.classList.add("resume-preview__heading--job-title");
+        let jobTitleDiv = document.getElementById("job-title-cap");
         jobTitleDiv.textContent = jobTitle;
     }
     
     if(email != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "email-layout";
-        newDiv.classList.add("layout-row")
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "email-label";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = "E-mail:"
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "email-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "email-template";
+        newDiv.classList.add("resume-preview__row")
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "email-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = "E-mail:"
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "email-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let emailDiv = document.getElementById("email-desc");
         emailDiv.textContent = email;
     }
     
     if(phone != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "phone-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "phone-label";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = "Phone:";
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "phone-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "phone-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "phone-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = "Phone:";
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "phone-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let phoneDiv = document.getElementById("phone-desc");
         phoneDiv.textContent = phone;
     }
 
     if(professionalSummary != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "professional-summary-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "professional-summary-cap";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = "Professional Summary:";
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "professional-summary-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "professional-summary-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "professional-summary-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = "Professional Summary:";
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "professional-summary-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let professionalSummaryDiv = document.getElementById("professional-summary-desc");
         professionalSummaryDiv.textContent = professionalSummary;
     }
     
     if(workplace1 != "" && employer1 != "" && jobStart1 != "" && jobEnd1 != "" && jobCity1 != "" && jobDescription1 != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutHeading = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newLayoutHeading);
-        newLayoutHeading.id = "employment-history-heading";
-        newLayoutHeading.classList.add("layout-heading");
-        newLayoutHeading.textContent = "Employment history";
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "employment-history-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "employment-history-cap";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = jobStart1 + " - " + jobEnd1;
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "employment-history-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateHeading = document.createElement("div");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newTemplateHeading);
+        newTemplateHeading.id = "employment-history-heading";
+        newTemplateHeading.classList.add("resume-preview__heading");
+        newTemplateHeading.textContent = "Employment history";
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "employment-history-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "employment-history-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = jobStart1 + " - " + jobEnd1;
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "employment-history-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let employmentHistoryDiv = document.getElementById("employment-history-desc");
         employmentHistoryDiv.textContent = workplace1 + " at " + employer1 + ", " + jobCity1 + " - " + jobDescription1;
     }
     
     if(school1 != "" && degree1 != "" && schoolStart1 != "" && schoolEnd1 != "" && schoolCity1 != "" && schoolDescription1 != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutHeading = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newLayoutHeading);
-        newLayoutHeading.id = "education-heading";
-        newLayoutHeading.classList.add("layout-heading");
-        newLayoutHeading.textContent = "Education";
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "education-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "education-cap";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = schoolStart1 + " - " + schoolEnd1;
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "education-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateHeading = document.createElement("div");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newTemplateHeading);
+        newTemplateHeading.id = "education-heading";
+        newTemplateHeading.classList.add("resume-preview__heading");
+        newTemplateHeading.textContent = "Education";
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "education-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "education-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = schoolStart1 + " - " + schoolEnd1;
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "education-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let educationDiv = document.getElementById("education-desc");
         educationDiv.textContent = school1 + ", " + degree1 + ", " + schoolCity1 + " - " + schoolDescription1;
     }
     
     if(skill1 != "" && skillDescription1 != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutHeading = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newLayoutHeading);
-        newLayoutHeading.id = "skills-heading";
-        newLayoutHeading.classList.add("layout-heading");
-        newLayoutHeading.textContent = "Skills";
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "skills-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "skills-cap";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = skill1;
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "skills-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateHeading = document.createElement("div");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newTemplateHeading);
+        newTemplateHeading.id = "skills-heading";
+        newTemplateHeading.classList.add("resume-preview__heading");
+        newTemplateHeading.textContent = "Skills";
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "skills-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "skills-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = skill1;
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "skills-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let skillsDiv = document.getElementById("skills-desc");
         skillsDiv.textContent = skillDescription1;
     }
     
     if(linkLabel1 != "" && link1 != "") {
-        let layoutDiv = document.getElementById("layout");
+        let templateDiv = document.getElementById("template");
         let newDiv = document.createElement("div");
-        let newLayoutHeading = document.createElement("div");
-        let newLayoutCap = document.createElement("div");
-        let newLayoutDesc = document.createElement("div");
-        layoutDiv.appendChild(newLayoutHeading);
-        newLayoutHeading.id = "links-heading";
-        newLayoutHeading.classList.add("layout-heading");
-        newLayoutHeading.textContent = "Links";
-        layoutDiv.appendChild(newDiv);
-        newDiv.id = "links-layout";
-        newDiv.classList.add("layout-row");
-        newDiv.appendChild(newLayoutCap);
-        newLayoutCap.id = "links-cap";
-        newLayoutCap.classList.add("layout-cap");
-        newLayoutCap.textContent = linkLabel1;
-        newDiv.appendChild(newLayoutDesc);
-        newLayoutDesc.id = "links-desc";
-        newLayoutDesc.classList.add("layout-desc");
+        let newTemplateHeading = document.createElement("div");
+        let newTemplateCap = document.createElement("div");
+        let newTemplateDesc = document.createElement("div");
+        templateDiv.appendChild(newTemplateHeading);
+        newTemplateHeading.id = "links-heading";
+        newTemplateHeading.classList.add("resume-preview__heading");
+        newTemplateHeading.textContent = "Links";
+        templateDiv.appendChild(newDiv);
+        newDiv.id = "links-template";
+        newDiv.classList.add("resume-preview__row");
+        newDiv.appendChild(newTemplateCap);
+        newTemplateCap.id = "links-cap";
+        newTemplateCap.classList.add("resume-preview__cap");
+        newTemplateCap.textContent = linkLabel1;
+        newDiv.appendChild(newTemplateDesc);
+        newTemplateDesc.id = "links-desc";
+        newTemplateDesc.classList.add("resume-preview__desc");
         let skillsDiv = document.getElementById("links-desc");
         skillsDiv.textContent = link1;
     }
