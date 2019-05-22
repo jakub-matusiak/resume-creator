@@ -16,6 +16,7 @@ body {
 
 .page-header__container,
 .page-footer__container {
+    background-color: #838383;
     width: 960px;
     padding: 10px;
 }
@@ -61,7 +62,7 @@ body {
 /* Resume creator */
 
 .resume-creator {
-    min-width: 340px;
+    min-width: 320px;
     width: 40%;
     margin: 0;
     padding: 0;
@@ -114,7 +115,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-width: 660px;
+    min-width: 640px;
     width: 60%;
     margin: 0;
     padding: 0;
