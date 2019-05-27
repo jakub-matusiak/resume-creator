@@ -1,215 +1,252 @@
 * {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.page-header,
-.page-footer {
-    background-color: #838383;
-    width: 100%;
+.page-header {
+  background-color: #838383;
+  width: 100%;
 }
 
-.page-header__container,
-.page-footer__container {
-    background-color: #838383;
-    width: 960px;
-    padding: 10px;
+@media print {
+  .page-header {
+    display: none;
+  }
 }
 
 .page-header__container {
-    margin: 0 auto 20px auto;
-}
-
-.page-footer__container {
-    margin: 10px auto 0 auto;
+  background-color: #838383;
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .page-header__logo {
-    font-size: 2em;
-    margin: 0;
-    padding: 0;
+  font-size: 2em;
+}
+
+.page-footer {
+  background-color: #838383;
+  width: 100%;
+}
+
+@media print {
+  .page-footer {
+    display: none;
+  }
+}
+
+.page-footer__container {
+  background-color: #838383;
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .page-footer__author {
-    font-size: 0.7em;
-    margin: 0;
-    padding: 0;
+  font-size: .7em;
 }
 
 .page-content {
-    display: flex;
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
 }
 
 .button {
-    background: #e7e7e7;
-    color: #769BFF;
-    font-size: 0.7em;
-    font-weight: 200;
-    text-transform: uppercase;
-    border: 0;
-    margin: 0;
-    padding: 5px 10px;
+  background: #e7e7e7;
+  color: #769BFF;
+  font-size: 0.7em;
+  font-weight: 200;
+  text-transform: uppercase;
+  border: 0;
+  margin: 0 auto;
+  padding: 5px 10px;
 }
 
-/* Resume creator */
+@media print {
+  .button {
+    display: none;
+  }
+}
 
 .resume-creator {
-    min-width: 320px;
-    width: 40%;
-    margin: 0;
-    padding: 0;
+  min-width: 320px;
+  width: 40%;
 }
 
-.resume-creator__heading {
-    font-size: 1.1em;
-    color: #769BFF;
-    margin: 0;
-    padding: 0;
-}
-
-.resume-creator__row {
-    display: flex;
-    margin: 0 5px;
-    padding: 5px;
+@media print {
+  .resume-creator {
+    display: none;
+  }
 }
 
 .resume-creator__fieldset {
-    border: 0;
+  position: relative;
+  width: 100%;
+  border: 0;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  padding-top: 30px;
+}
+
+.resume-creator__heading {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.1em;
+  color: #769BFF;
+}
+
+.resume-creator__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 5px;
+  padding: 5px;
 }
 
 .resume-creator__label {
-    font-size: 0.7em;
-    color: #838383;
-    width: 150px;
-    margin: 0 5px;
-    padding: 0;
+  font-size: 0.7em;
+  width: 100%;
+  margin: 0 5px;
 }
 
-.resume-creator__span,
-.resume-creator__input,
-.resume-creator__textarea {
-    width: 100%;
+.resume-creator__span {
+  width: 100%;
 }
 
-.resume-creator__input,
+.resume-creator__input {
+  width: 100%;
+  border: 1px solid #CCCCCC;
+}
+
 .resume-creator__textarea {
-    border: 1px solid #CCCCCC;
+  width: 100%;
+  border: 1px solid #CCCCCC;
 }
 
 .resume-creator__input--photo {
-    border: 0;
+  border: 0;
 }
-
-/* Resume preview */
 
 .resume-preview {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-width: 640px;
-    width: 60%;
-    margin: 0;
-    padding: 0;
+  text-align: center;
+  min-width: 640px;
+  width: 60%;
 }
 
-.resume-preview__title,
-.resume-preview__heading--name,
-.resume-preview__heading--job-title {
-    font-size: 1.2em;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-}
-
-.resume-preview__heading--name {
-    color: #769BFF;
+@media print {
+  .resume-preview {
+    width: 100%;
+  }
 }
 
 .resume-preview__template {
-    background: #FFFFFF;
-    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
-    width: 80%;
-    min-height: 100vh;
-    margin: 15px;
-    padding: 25px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  min-height: 100vh;
+  margin: 15px auto;
+  padding: 25px;
+}
+
+@media print {
+  .resume-preview__template {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+  }
+}
+
+.resume-preview__title {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+@media print {
+  .resume-preview__title {
+    display: none;
+  }
+}
+
+.resume-preview__heading--name {
+  color: #769BFF;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-preview__heading--job-title {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 .resume-preview__row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    margin: 0;
-    padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .resume-preview__heading {
-    font-size: 1.1em;
-    color: #769BFF;
-    text-align: right;
-    width: 40%;
-    margin: 0;
-    padding: 0;
+  font-size: 1.1em;
+  color: #769BFF;
+  text-align: right;
+  width: 40%;
+}
+
+@media print {
+  .resume-preview__heading {
+    width: 30%;
+  }
 }
 
 .resume-preview__cap {
-    font-size: 0.9em;
-    font-weight: 400;
-    text-align: right;
-    width: 40%;
-    margin: 5px 10px;
-    padding: 0;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-align: right;
+  width: 40%;
+  margin: 5px 10px;
+}
+
+@media print {
+  .resume-preview__cap {
+    width: 30%;
+  }
 }
 
 .resume-preview__desc {
-    font-size: 0.9em;
-    font-weight: 200;
-    width: 60%;
-    margin: 0;
-    padding: 0;
+  font-size: 0.9em;
+  font-weight: 200;
+  text-align: left;
+  width: 60%;
 }
-
-/* Printing */
 
 @media print {
-    .page-header,
-    .page-footer,
-    .resume-creator,
-    .resume-preview__title {
-        display: none;
-    }
-
-    .resume-preview {
-        width: 100%;
-        border: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    .resume-preview__template {
-        width: 100%;
-        box-shadow: none;
-        margin: 0;
-    }
-
-    .resume-preview__heading,
-    .resume-preview__cap {
-        width: 30%;
-    }
-
-    .resume-preview__desc {
-        width: 70%;
-    }
-
-    .button--print {
-        display: none;
-    }
+  .resume-preview__desc {
+    width: 70%;
+  }
 }
+/*# sourceMappingURL=main.css.map */
