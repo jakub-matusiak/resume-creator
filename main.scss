@@ -1,4 +1,37 @@
-$primaryColor: #838383;
+$colors: (
+    basic: #000000,
+    primary: #2F6690,
+    secondary: #16425B,
+    bg: #3A7CA5,
+    font: #D9DCD6,
+    accent: #81C3D7
+);
+
+$fonts: (
+    xs: .8em,
+    s: 1em,
+    m: 1.2em,
+    l: 1.4em,
+    xl: 1.6em,
+    xxl: 2em,
+    light: 200,
+    regular: 400,
+    bold: 600
+);
+
+@function color($color) {
+    @return map-get($colors, $color)
+};
+
+@function font($font) {
+    @return map-get($fonts, $font)
+};
+
+@mixin fonts($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+};
 
 * {
     box-sizing: border-box;
@@ -8,39 +41,43 @@ $primaryColor: #838383;
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background: color(bg);
+}
+
+%item {
+    background: color(secondary);
+    width: 100%;
+}
+
+%container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .page-header {
-    background-color: $primaryColor;
-    width: 100%;
+    @extend %item;
     @media print {
         display: none;
     }
     &__container {
-        background-color: $primaryColor;
-        width: 960px;
-        margin: 0 auto;
-        padding: 10px;
+        @extend %container;
     }
     &__logo {
-        font-size: 2em;
+        @include fonts(color(font), font(xxl), font(regular));
     }
 }
 
 .page-footer {
-    background-color: $primaryColor;
-    width: 100%;
+    @extend %item;
     @media print {
         display: none;
     }
     &__container {
-        background-color: $primaryColor;
-        width: 960px;
-        margin: 0 auto;
-        padding: 10px;
+        @extend %container;
     }
     &__author {
-        font-size: .7em;
+        @include fonts(color(font), font(xs), font(regular));
     }
 }
 
@@ -51,39 +88,39 @@ body {
 }
 
 .button {
-    background: #e7e7e7;
-    color: #769BFF;
-    font-size: 0.7em;
-    font-weight: 200;
+    @include fonts(color(basic), font(xs), font(regular));
+    background: color(accent);
     text-transform: uppercase;
     border: 0;
-    margin: 0 auto;
+    margin-bottom: 15px;
     padding: 5px 10px;
     @media print {
         display: none;
     }
+    &__container {
+        text-align: center;
+    }
 }
 
 .resume-creator {
-    min-width: 320px;
     width: 40%;
     @media print {
         display: none;
     }
     &__fieldset {
         position: relative;
-        width: 100%;
+        background: color(primary);
         border: 0;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        margin: 15px 0;
-        padding-top: 30px;
+        box-shadow: 0 0 15px rgba(0,0,0,.1);
+        margin: 15px 20px;
+        padding-top: 25px;
+        padding-bottom: 15px;
     }
     &__heading {
+        @include fonts(color(font), font(m), font(regular));
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 10px;
-        font-size: 1.1em;
-        color: #769BFF;
     }
     &__row {
         display: flex;
@@ -91,67 +128,57 @@ body {
         padding: 5px;
     }
     &__label {
-        font-size: 0.7em;
+        @include fonts(color(font), font(xs), font(light));
         width: 100%;
         margin: 0 5px;
+        &--photo {
+            display: none;
+        }
     }
     &__span {
         width: 100%;
     }
     &__input {
         width: 100%;
-        border: 1px solid #CCCCCC;
+        &--photo {
+            display: none;
+        }
     }
     &__textarea {
         width: 100%;
-        border: 1px solid #CCCCCC;
-    }
-    &__input--photo {
-        border: 0;
     }
 }
 
 .resume-preview {
     text-align: center;
-    min-width: 640px;
     width: 60%;
     @media print {
         width: 100%;
     }
     &__template {
         background: #FFFFFF;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        width: 80%;
+        box-shadow: 0 0 15px rgba(0,0,0,.1);
+        width: 90%;
         min-height: 100vh;
         margin: 15px auto;
         padding: 25px;
         @media print {
             width: 100%;
             box-shadow: none;
-            margin: 0;
         }
     }
     &__title {
-        font-size: 1.2em;
-        font-weight: 400;
-        margin: 0;
-        padding: 0;
+        @include fonts(color(font), font(m), font(regular));
+        margin: 15px;
         @media print {
             display: none;
         }
     }
     &__heading--name {
-        color: #769BFF;
-        font-size: 1.2em;
-        font-weight: 400;
-        margin: 0;
-        padding: 0;
+        @include fonts(color(primary), font(xl), font(regular));
     }
     &__heading--job-title {
-        font-size: 1.2em;
-        font-weight: 400;
-        margin: 0;
-        padding: 0;
+        @include fonts(color(basic), font(s), font(regular));
     }
     &__row {
         display: flex;
@@ -159,8 +186,7 @@ body {
         align-items: baseline;
     }
     &__heading {
-        font-size: 1.1em;
-        color: #769BFF;
+        @include fonts(color(primary), font(m), font(regular));
         text-align: right;
         width: 40%;
         @media print {
@@ -168,8 +194,7 @@ body {
         }
     }
     &__cap {
-        font-size: 0.9em;
-        font-weight: 400;
+        @include fonts(color(basic), font(s), font(regular));
         text-align: right;
         width: 40%;
         margin: 5px 10px;
@@ -178,8 +203,7 @@ body {
         }
     }
     &__desc {
-        font-size: 0.9em;
-        font-weight: 200;
+        @include fonts(color(basic), font(s), font(light));
         text-align: left;
         width: 60%;
         @media print {

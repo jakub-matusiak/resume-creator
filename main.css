@@ -7,11 +7,18 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background: #3A7CA5;
 }
 
-.page-header {
-  background-color: #838383;
+.page-header, .page-footer {
+  background: #16425B;
   width: 100%;
+}
+
+.page-header__container, .page-footer__container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 @media print {
@@ -20,20 +27,10 @@ body {
   }
 }
 
-.page-header__container {
-  background-color: #838383;
-  width: 960px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
 .page-header__logo {
+  color: #D9DCD6;
   font-size: 2em;
-}
-
-.page-footer {
-  background-color: #838383;
-  width: 100%;
+  font-weight: 400;
 }
 
 @media print {
@@ -42,15 +39,10 @@ body {
   }
 }
 
-.page-footer__container {
-  background-color: #838383;
-  width: 960px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
 .page-footer__author {
-  font-size: .7em;
+  color: #D9DCD6;
+  font-size: 0.8em;
+  font-weight: 400;
 }
 
 .page-content {
@@ -62,13 +54,13 @@ body {
 }
 
 .button {
-  background: #e7e7e7;
-  color: #769BFF;
-  font-size: 0.7em;
-  font-weight: 200;
+  color: #000000;
+  font-size: 0.8em;
+  font-weight: 400;
+  background: #81C3D7;
   text-transform: uppercase;
   border: 0;
-  margin: 0 auto;
+  margin-bottom: 15px;
   padding: 5px 10px;
 }
 
@@ -78,8 +70,11 @@ body {
   }
 }
 
+.button__container {
+  text-align: center;
+}
+
 .resume-creator {
-  min-width: 320px;
   width: 40%;
 }
 
@@ -91,20 +86,22 @@ body {
 
 .resume-creator__fieldset {
   position: relative;
-  width: 100%;
+  background: #2F6690;
   border: 0;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  margin: 15px 0;
-  padding-top: 30px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 15px 20px;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 .resume-creator__heading {
+  color: #D9DCD6;
+  font-size: 1.2em;
+  font-weight: 400;
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 10px;
-  font-size: 1.1em;
-  color: #769BFF;
 }
 
 .resume-creator__row {
@@ -116,9 +113,15 @@ body {
 }
 
 .resume-creator__label {
-  font-size: 0.7em;
+  color: #D9DCD6;
+  font-size: 0.8em;
+  font-weight: 200;
   width: 100%;
   margin: 0 5px;
+}
+
+.resume-creator__label--photo {
+  display: none;
 }
 
 .resume-creator__span {
@@ -127,21 +130,18 @@ body {
 
 .resume-creator__input {
   width: 100%;
-  border: 1px solid #CCCCCC;
+}
+
+.resume-creator__input--photo {
+  display: none;
 }
 
 .resume-creator__textarea {
   width: 100%;
-  border: 1px solid #CCCCCC;
-}
-
-.resume-creator__input--photo {
-  border: 0;
 }
 
 .resume-preview {
   text-align: center;
-  min-width: 640px;
   width: 60%;
 }
 
@@ -153,9 +153,9 @@ body {
 
 .resume-preview__template {
   background: #FFFFFF;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
   min-height: 100vh;
   margin: 15px auto;
   padding: 25px;
@@ -166,15 +166,14 @@ body {
     width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
-    margin: 0;
   }
 }
 
 .resume-preview__title {
+  color: #D9DCD6;
   font-size: 1.2em;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
+  margin: 15px;
 }
 
 @media print {
@@ -184,18 +183,15 @@ body {
 }
 
 .resume-preview__heading--name {
-  color: #769BFF;
-  font-size: 1.2em;
+  color: #2F6690;
+  font-size: 1.6em;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
 }
 
 .resume-preview__heading--job-title {
-  font-size: 1.2em;
+  color: #000000;
+  font-size: 1em;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
 }
 
 .resume-preview__row {
@@ -211,8 +207,9 @@ body {
 }
 
 .resume-preview__heading {
-  font-size: 1.1em;
-  color: #769BFF;
+  color: #2F6690;
+  font-size: 1.2em;
+  font-weight: 400;
   text-align: right;
   width: 40%;
 }
@@ -224,7 +221,8 @@ body {
 }
 
 .resume-preview__cap {
-  font-size: 0.9em;
+  color: #000000;
+  font-size: 1em;
   font-weight: 400;
   text-align: right;
   width: 40%;
@@ -238,7 +236,8 @@ body {
 }
 
 .resume-preview__desc {
-  font-size: 0.9em;
+  color: #000000;
+  font-size: 1em;
   font-weight: 200;
   text-align: left;
   width: 60%;

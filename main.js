@@ -7,7 +7,7 @@ form.addEventListener("submit", event => {
     const personalDetails = [data.get("first-name"), data.get("last-name"), data.get("job-title"), data.get("email"), data.get("phone"), data.get("professional-summary")];
     const links = [data.get("link-label"), data.get("link")];
     const employment = [data.get("workplace"), data.get("employer"), data.get("job-start"), data.get("job-end"), data.get("job-city"), data.get("job-description")];
-    const education = [data.get("school"), data.get("degree"), data.get("school-start"), data.get("school-end"), data.get("school-city"), data.get("school-description")];
+    const education = [data.get("school"), data.get("school-start"), data.get("school-end"), data.get("school-city"), data.get("school-description")];
     const skills = [data.get("skill"), data.get("skill-description")];
     const template = document.getElementById("template");
     const docFrag = document.createDocumentFragment();
@@ -80,25 +80,6 @@ form.addEventListener("submit", event => {
         row.appendChild(docFrag);
     }
 
-    if (links[0] && links[1]) {
-        const row = document.createElement("div");
-        const cap = document.createElement("div");
-        const desc = document.createElement("div");
-        const heading = document.createElement("div");
-        template.appendChild(heading);
-        heading.classList.add("resume-preview__heading");
-        heading.textContent = "Links:";
-        template.appendChild(row);
-        row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__cap");
-        cap.textContent = links[0];
-        desc.classList.add("resume-preview__desc");
-        desc.textContent = links[1];
-        docFrag.appendChild(cap);
-        docFrag.appendChild(desc);
-        row.appendChild(docFrag);
-    }
-
     if (employment[0] && employment[1] && employment[2] && employment[3] && employment[4] && employment[5]) {
         const row = document.createElement("div");
         const cap = document.createElement("div");
@@ -118,7 +99,7 @@ form.addEventListener("submit", event => {
         row.appendChild(docFrag);
     }
 
-    if (education[0] && education[1] && education[2] && education[3] && education[4] && education[5]) {
+    if (education[0] && education[1] && education[2] && education[3] && education[4]) {
         const row = document.createElement("div");
         const cap = document.createElement("div");
         const desc = document.createElement("div");
@@ -129,9 +110,9 @@ form.addEventListener("submit", event => {
         template.appendChild(row);
         row.classList.add("resume-preview__row");
         cap.classList.add("resume-preview__cap");
-        cap.textContent = `${education[2]} - ${education[3]}`;
+        cap.textContent = `${education[1]} - ${education[2]}`;
         desc.classList.add("resume-preview__desc");
-        desc.textContent = `${education[0]}, ${education[1]}, ${education[4]} - ${education[5]}`;
+        desc.textContent = `${education[0]}, ${education[3]} - ${education[4]}`;
         docFrag.appendChild(cap);
         docFrag.appendChild(desc);
         row.appendChild(docFrag);
@@ -155,10 +136,29 @@ form.addEventListener("submit", event => {
         docFrag.appendChild(desc);
         row.appendChild(docFrag);
     }
+
+    if (links[0] && links[1]) {
+        const row = document.createElement("div");
+        const cap = document.createElement("div");
+        const desc = document.createElement("div");
+        const heading = document.createElement("div");
+        template.appendChild(heading);
+        heading.classList.add("resume-preview__heading");
+        heading.textContent = "Links:";
+        template.appendChild(row);
+        row.classList.add("resume-preview__row");
+        cap.classList.add("resume-preview__cap");
+        cap.textContent = links[0];
+        desc.classList.add("resume-preview__desc");
+        desc.textContent = links[1];
+        docFrag.appendChild(cap);
+        docFrag.appendChild(desc);
+        row.appendChild(docFrag);
+    }
 });
 
 const printFn = () => {
     window.print();
 }
 
-printBtn.addEventListener("click", printFn, false);
+printBtn.addEventListener("click", printFn);
