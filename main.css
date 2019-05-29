@@ -95,6 +95,13 @@ body {
   padding-bottom: 15px;
 }
 
+.resume-creator__fieldset--icon {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  color: #16425B;
+}
+
 .resume-creator__heading {
   color: #D9DCD6;
   font-size: 1.2em;
@@ -118,6 +125,7 @@ body {
   font-weight: 200;
   width: 100%;
   margin: 0 5px;
+  z-index: 1;
 }
 
 .resume-creator__label--photo {
