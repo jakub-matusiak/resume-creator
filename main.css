@@ -16,6 +16,7 @@ body {
 }
 
 .page-header__container, .page-footer__container {
+  background: #16425B;
   width: 960px;
   margin: 0 auto;
   padding: 10px;
