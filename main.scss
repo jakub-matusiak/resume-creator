@@ -136,14 +136,18 @@ body {
     }
     &__label {
         @include fonts(color(font), font(xs), font(light));
-        width: 100%;
+        width: 50%;
         margin: 0 5px;
         z-index: 1;
         &--photo {
             display: none;
         }
+        &--oneline {
+            width: 100%;
+        }
     }
     &__span {
+        display: inline-block;
         width: 100%;
     }
     &__input {
