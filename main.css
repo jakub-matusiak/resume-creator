@@ -17,9 +17,15 @@ body {
 
 .page-header__container, .page-footer__container {
   background: #16425B;
-  width: 960px;
+  width: 1080px;
   margin: 0 auto;
   padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .page-header__container, .page-footer__container {
+    width: 100%;
+  }
 }
 
 @media print {
@@ -50,8 +56,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 960px;
+  width: 1080px;
   margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
 }
 
 .button {
@@ -79,6 +95,12 @@ body {
   width: 40%;
 }
 
+@media (max-width: 480px) {
+  .resume-creator {
+    width: 100%;
+  }
+}
+
 @media print {
   .resume-creator {
     display: none;
@@ -101,6 +123,12 @@ body {
   top: 7px;
   right: 15px;
   color: #16425B;
+}
+
+@media (max-width: 480px) {
+  .resume-creator__fieldset {
+    margin: 15px 0;
+  }
 }
 
 .resume-creator__heading {
@@ -157,6 +185,12 @@ body {
 .resume-preview {
   text-align: center;
   width: 60%;
+}
+
+@media (max-width: 480px) {
+  .resume-preview {
+    width: 100%;
+  }
 }
 
 @media print {
