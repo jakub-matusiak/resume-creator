@@ -89,7 +89,7 @@ body {
 }
 
 .button {
-    @include fonts(color(basic), font(xs), font(regular));
+    @include fonts(color(primary), font(xs), font(regular));
     background: color(accent);
     text-transform: uppercase;
     border: 0;
