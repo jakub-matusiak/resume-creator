@@ -63,97 +63,101 @@
                         </label>
                     </div>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset">
+                <fieldset class="resume-creator__fieldset" id="employment">
                     <legend class="resume-creator__heading">Employment history</legend>
                     <div class="resume-creator__fieldset--icon"><i class="fas fa-business-time fa-2x"></i></div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Workplace:</span>
-                            <input type="text" class="resume-creator__input" name="workplace">
+                            <input type="text" class="resume-creator__input" name="workplace-1">
                         </label>
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Employer:</span>
-                            <input type="text" class="resume-creator__input" name="employer">
+                            <input type="text" class="resume-creator__input" name="employer-1">
                         </label>
                     </div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Start date:</span>
-                            <input type="date" class="resume-creator__input" name="job-start">
+                            <input type="date" class="resume-creator__input" name="job-start-1">
                         </label>
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">End date:</span>
-                            <input type="date" class="resume-creator__input" name="job-end">
+                            <input type="date" class="resume-creator__input" name="job-end-1">
                         </label>
                     </div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">City:</span>
-                            <input type="text" class="resume-creator__input" name="job-city">
+                            <input type="text" class="resume-creator__input" name="job-city-1">
                         </label>
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="job-description"></textarea>
+                            <textarea class="resume-creator__textarea" name="job-description-1"></textarea>
                         </label>
                     </div>
+                    <div class="resume-creator__fieldset--buttons"><button class="button--add" id="add-employment" type="button"><i class="fas fa-plus-circle"></i></button><button class="button--remove" id="remove-employment" type="button"><i class="fas fa-minus-circle"></i></button></div>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset">
+                <fieldset class="resume-creator__fieldset" id="education">
                     <legend class="resume-creator__heading">Education</legend>
                     <div class="resume-creator__fieldset--icon"><i class="fas fa-graduation-cap fa-2x"></i></div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label resume-creator__label--oneline">
                             <span class="resume-creator__span">School:</span>
-                            <input type="text" class="resume-creator__input" name="school">
+                            <input type="text" class="resume-creator__input" name="school-1">
                         </label>
                     </div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Start date:</span>
-                            <input type="date" class="resume-creator__input" name="school-start">
+                            <input type="date" class="resume-creator__input" name="school-start-1">
                         </label>
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">End date:</span>
-                            <input type="date" class="resume-creator__input" name="school-end">
+                            <input type="date" class="resume-creator__input" name="school-end-1">
                         </label>
                     </div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">City:</span>
-                            <input type="text" class="resume-creator__input" name="school-city">
+                            <input type="text" class="resume-creator__input" name="school-city-1">
                         </label>
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="school-description"></textarea>
+                            <textarea class="resume-creator__textarea" name="school-description-1"></textarea>
                         </label>
                     </div>
+                    <div class="resume-creator__fieldset--buttons"><button class="button--add" id="add-education" type="button"><i class="fas fa-plus-circle"></i></button><button class="button--remove" id="remove-education" type="button"><i class="fas fa-minus-circle"></i></button></div>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset">
+                <fieldset class="resume-creator__fieldset" id="skills">
                     <legend class="resume-creator__heading">Skills</legend>
                     <div class="resume-creator__fieldset--icon"><i class="fas fa-laptop-code fa-2x"></i></div>
                     <div class="resume-creator__row">
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Skill:</span>
-                            <input type="text" class="resume-creator__input" name="skill">
+                            <input type="text" class="resume-creator__input" name="skill-1">
                         </label>
                         <label class="resume-creator__label">
                             <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="skill-description"></textarea>
+                            <textarea class="resume-creator__textarea" name="skill-description-1"></textarea>
                         </label>
                     </div>
+                    <div class="resume-creator__fieldset--buttons"><button class="button--add" id="add-skill" type="button"><i class="fas fa-plus-circle"></i></button><button class="button--remove" id="remove-skill" type="button"><i class="fas fa-minus-circle"></i></button></div>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset">
+                <fieldset class="resume-creator__fieldset" id="links">
                     <legend class="resume-creator__heading">Links</legend>
                     <div class="resume-creator__fieldset--icon"><i class="fas fa-link fa-2x"></i></div>
-                    <div class="resume-creator__row">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Label:</span>
-                            <input type="text" class="resume-creator__input" name="link-label">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Link:</span>
-                            <input type="text" class="resume-creator__input" name="link">
-                        </label>
-                    </div>
+                        <div class="resume-creator__row">
+                            <label class="resume-creator__label">
+                                <span class="resume-creator__span">Label:</span>
+                                <input type="text" class="resume-creator__input" name="link-label-1">
+                            </label>
+                            <label class="resume-creator__label">
+                                <span class="resume-creator__span">Link:</span>
+                                <input type="text" class="resume-creator__input" name="link-1">
+                            </label>
+                        </div>
+                    <div class="resume-creator__fieldset--buttons"><button class="button--add" id="add-link" type="button"><i class="fas fa-plus-circle"></i></button><button class="button--remove" id="remove-link" type="button"><i class="fas fa-minus-circle"></i></button></div>
                 </fieldset>
                 <div class="button__container">
                     <button class="button button--generate" type="submit">Generate</button>
