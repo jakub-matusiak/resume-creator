@@ -108,6 +108,19 @@ body {
     &__container {
         text-align: center;
     }
+    &--add {
+        @extend %button-js;
+    }
+    &--remove {
+        @extend %button-js;
+    }
+}
+
+%button-js {
+    @include fonts(color(secondary), font(s), font(regular));
+    background: none;
+    border: 0;
+    margin-left: 5px;
 }
 
 .resume-creator {
@@ -125,12 +138,17 @@ body {
         box-shadow: 0 0 15px rgba(0,0,0,.1);
         margin: 15px 20px;
         padding-top: 25px;
-        padding-bottom: 15px;
+        padding-bottom: 25px;
         &--icon {
             position: absolute;
             top: 7px;
             right: 15px;
             color: color(secondary);
+        }
+        &--buttons {
+            position: absolute;
+            bottom: 5px;
+            right: 15px;
         }
         @media (max-width: 480px) {
             margin: 15px 0;
