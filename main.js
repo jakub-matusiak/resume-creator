@@ -215,11 +215,11 @@ form.addEventListener("submit", event => {
 
 /* Employment buttons start */
 
+const employmentFieldset = document.getElementById("employment");
 const addEmploymentBtn = document.getElementById("add-employment");
 const removeEmploymentBtn = document.getElementById("remove-employment");
 
 addEmploymentBtn.addEventListener("click", () => {
-    const employmentFieldset = document.getElementById("employment");
     const add = [];
     
     countEmployment++;
@@ -228,6 +228,7 @@ addEmploymentBtn.addEventListener("click", () => {
         for (let j = 0; j <= 2; j++) {
             add[j] = document.createElement("div");
             add[j].classList.add("resume-creator__row");
+            add[j].classList.add(`employment-${countEmployment}`);
         }
         add[i+3] = document.createElement("label");
         add[i+4] = document.createElement("span");
@@ -288,18 +289,25 @@ addEmploymentBtn.addEventListener("click", () => {
 });
 
 removeEmploymentBtn.addEventListener("click", () => {
+    const row = employmentFieldset.querySelectorAll(`.employment-${countEmployment}`);
 
+    if (countEmployment > 1) {
+        employmentFieldset.removeChild(row[0]);
+        employmentFieldset.removeChild(row[1]);
+        employmentFieldset.removeChild(row[2]);
+        countEmployment--;
+    }
 });
 
 /* Employment buttons end */
 
 /* Education buttons start */
 
+const educationFieldset = document.getElementById("education");
 const addEducationBtn = document.getElementById("add-education");
 const removeEducationBtn = document.getElementById("remove-education");
 
 addEducationBtn.addEventListener("click", () => {
-    const educationFieldset = document.getElementById("education");
     const add = [];
     
     countEducation++;
@@ -308,6 +316,7 @@ addEducationBtn.addEventListener("click", () => {
         for (let j = 0; j <= 2; j++) {
             add[j] = document.createElement("div");
             add[j].classList.add("resume-creator__row");
+            add[j].classList.add(`education-${countEducation}`);
         }
         add[i+3] = document.createElement("label");
         add[i+4] = document.createElement("span");
@@ -363,18 +372,25 @@ addEducationBtn.addEventListener("click", () => {
 });
 
 removeEducationBtn.addEventListener("click", () => {
+    const row = educationFieldset.querySelectorAll(`.education-${countEducation}`);
 
+    if (countEducation > 1) {
+        educationFieldset.removeChild(row[0]);
+        educationFieldset.removeChild(row[1]);
+        educationFieldset.removeChild(row[2]);
+        countEducation--;
+    }
 });
 
 /* Education buttons end */
 
 /* Skills buttons start */
 
+const skillsFieldset = document.getElementById("skills");
 const addSkillBtn = document.getElementById("add-skill");
 const removeSkillBtn = document.getElementById("remove-skill");
 
 addSkillBtn.addEventListener("click", () => {
-    const skillsFieldset = document.getElementById("skills");
     const row = document.createElement("div");
     const add = [];
     
@@ -398,6 +414,7 @@ addSkillBtn.addEventListener("click", () => {
     }
 
     row.classList.add("resume-creator__row");
+    row.classList.add(`skills-${countSkills}`);
     add[0].appendChild(add[1]);
     add[0].appendChild(add[2]);
     add[3].appendChild(add[4]);
@@ -415,18 +432,23 @@ addSkillBtn.addEventListener("click", () => {
 });
 
 removeSkillBtn.addEventListener("click", () => {
+    const row = skillsFieldset.querySelector(`.skills-${countSkills}`);
 
+    if (countSkills > 1) {
+        skillsFieldset.removeChild(row);
+        countSkills--;
+    }
 });
 
 /* Skills buttons end */
 
 /* Links buttons start */
 
+const linksFieldset = document.getElementById("links");
 const addLinkBtn = document.getElementById("add-link");
 const removeLinkBtn = document.getElementById("remove-link");
 
 addLinkBtn.addEventListener("click", () => {
-    const linksFieldset = document.getElementById("links");
     const row = document.createElement("div");
     const add = [];
     
@@ -442,6 +464,7 @@ addLinkBtn.addEventListener("click", () => {
     }
 
     row.classList.add("resume-creator__row");
+    row.classList.add(`links-${countLinks}`);
     add[0].appendChild(add[1]);
     add[0].appendChild(add[2]);
     add[3].appendChild(add[4]);
@@ -460,7 +483,12 @@ addLinkBtn.addEventListener("click", () => {
 });
 
 removeLinkBtn.addEventListener("click", () => {
+    const row = linksFieldset.querySelector(`.links-${countLinks}`);
 
+    if (countLinks > 1) {
+        linksFieldset.removeChild(row);
+        countLinks--;
+    }
 });
 
 /* Links buttons end */
