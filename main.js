@@ -49,9 +49,9 @@ form.addEventListener("submit", event => {
         const desc = document.createElement("div");
         template.appendChild(row);
         row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__cap");
+        cap.classList.add("resume-preview__caption");
         cap.textContent = "E-mail:";
-        desc.classList.add("resume-preview__desc");
+        desc.classList.add("resume-preview__description");
         desc.textContent = personalDetails[3];
         row.appendChild(cap);
         row.appendChild(desc);
@@ -63,9 +63,9 @@ form.addEventListener("submit", event => {
         const desc = document.createElement("div");
         template.appendChild(row);
         row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__cap");
+        cap.classList.add("resume-preview__caption");
         cap.textContent = "Phone:";
-        desc.classList.add("resume-preview__desc");
+        desc.classList.add("resume-preview__description");
         desc.textContent = personalDetails[4];
         row.appendChild(cap);
         row.appendChild(desc);
@@ -81,9 +81,9 @@ form.addEventListener("submit", event => {
         const desc = document.createElement("div");
         template.appendChild(row);
         row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__cap");
+        cap.classList.add("resume-preview__caption");
         cap.textContent = "Professional Summary:";
-        desc.classList.add("resume-preview__desc");
+        desc.classList.add("resume-preview__description");
         desc.textContent = professionalSummary[0];
         row.appendChild(cap);
         row.appendChild(desc);
@@ -110,9 +110,9 @@ form.addEventListener("submit", event => {
             }
             template.appendChild(row);
             row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__cap");
+            cap.classList.add("resume-preview__caption");
             cap.textContent = `${employment[i+2]} - ${employment[i+3]}`;
-            desc.classList.add("resume-preview__desc");
+            desc.classList.add("resume-preview__description");
             desc.textContent = `${employment[i]} at ${employment[i+1]}, ${employment[i+4]} - ${employment[i+5]}`;
             row.appendChild(cap);
             row.appendChild(desc);
@@ -140,9 +140,9 @@ form.addEventListener("submit", event => {
             }
             template.appendChild(row);
             row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__cap");
+            cap.classList.add("resume-preview__caption");
             cap.textContent = `${education[i+1]} - ${education[i+2]}`;
-            desc.classList.add("resume-preview__desc");
+            desc.classList.add("resume-preview__description");
             desc.textContent = `${education[i]}, ${education[i+3]} - ${education[i+4]}`;
             row.appendChild(cap);
             row.appendChild(desc);
@@ -170,9 +170,9 @@ form.addEventListener("submit", event => {
             }
             template.appendChild(row);
             row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__cap");
+            cap.classList.add("resume-preview__caption");
             cap.textContent = skills[i];
-            desc.classList.add("resume-preview__desc");
+            desc.classList.add("resume-preview__description");
             desc.textContent = skills[i+1];
             row.appendChild(cap);
             row.appendChild(desc);
@@ -200,9 +200,9 @@ form.addEventListener("submit", event => {
             }
             template.appendChild(row);
             row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__cap");
+            cap.classList.add("resume-preview__caption");
             cap.textContent = links[i];
-            desc.classList.add("resume-preview__desc");
+            desc.classList.add("resume-preview__description");
             desc.textContent = links[i+1];
             row.appendChild(cap);
             row.appendChild(desc);

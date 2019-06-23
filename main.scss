@@ -7,13 +7,16 @@ $colors: (
     accent: #81C3D7
 );
 
-$fonts: (
+$font-size: (
     xs: .8em,
     s: 1em,
     m: 1.2em,
     l: 1.4em,
     xl: 1.6em,
-    xxl: 2em,
+    xxl: 2em
+);
+
+$font-weight: (
     light: 200,
     regular: 400,
     bold: 600
@@ -23,20 +26,26 @@ $fonts: (
     @return map-get($colors, $color)
 };
 
-@function font($font) {
-    @return map-get($fonts, $font)
+@function font-size($font) {
+    @return map-get($font-size, $font)
 };
 
-@mixin fonts($color, $size, $weight) {
+@function font-weight($font) {
+    @return map-get($font-weight, $font)
+};
+
+@mixin font($color, $size, $weight) {
     color: $color;
     font-size: $size;
     font-weight: $weight;
 };
 
-* {
+html {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
@@ -68,7 +77,8 @@ body {
         @extend %container;
     }
     &__logo {
-        @include fonts(color(font), font(xxl), font(regular));
+        @include font(color(font), font-size(xxl), font-weight(regular));
+        margin: 0;
     }
 }
 
@@ -81,7 +91,8 @@ body {
         @extend %container;
     }
     &__author {
-        @include fonts(color(font), font(xs), font(regular));
+        @include font(color(font), font-size(xs), font-weight(regular));
+        margin: 0;
     }
 }
 
@@ -96,7 +107,7 @@ body {
 }
 
 .button {
-    @include fonts(color(primary), font(xs), font(regular));
+    @include font(color(primary), font-size(xs), font-weight(regular));
     background: color(accent);
     text-transform: uppercase;
     border: 0;
@@ -117,10 +128,11 @@ body {
 }
 
 %button-js {
-    @include fonts(color(secondary), font(s), font(regular));
+    @include font(color(secondary), font-size(s), font-weight(regular));
     background: none;
     border: 0;
     margin-left: 5px;
+    padding: 0;
 }
 
 .resume-creator {
@@ -137,8 +149,7 @@ body {
         border: 0;
         box-shadow: 0 0 15px rgba(0,0,0,.1);
         margin: 15px 20px;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding: 25px 0;
         &--icon {
             position: absolute;
             top: 7px;
@@ -155,7 +166,7 @@ body {
         }
     }
     &__heading {
-        @include fonts(color(font), font(m), font(regular));
+        @include font(color(font), font-size(m), font-weight(regular));
         position: absolute;
         top: 5px;
         left: 10px;
@@ -166,7 +177,7 @@ body {
         padding: 5px;
     }
     &__label {
-        @include fonts(color(font), font(xs), font(light));
+        @include font(color(font), font-size(xs), font-weight(regular));
         width: 50%;
         margin: 0 5px;
         z-index: 1;
@@ -180,6 +191,7 @@ body {
     &__span {
         display: inline-block;
         width: 100%;
+        margin-bottom: 2px;
     }
     &__input {
         width: 100%;
@@ -214,17 +226,19 @@ body {
         }
     }
     &__title {
-        @include fonts(color(font), font(m), font(regular));
+        @include font(color(font), font-size(m), font-weight(regular));
         margin: 15px;
         @media print {
             display: none;
         }
     }
     &__heading--name {
-        @include fonts(color(primary), font(xl), font(regular));
+        @include font(color(primary), font-size(xl), font-weight(regular));
+        margin: 0;
     }
     &__heading--job-title {
-        @include fonts(color(basic), font(s), font(regular));
+        @include font(color(basic), font-size(s), font-weight(regular));
+        margin: 0;
     }
     &__row {
         display: flex;
@@ -232,15 +246,15 @@ body {
         align-items: baseline;
     }
     &__heading {
-        @include fonts(color(primary), font(m), font(regular));
+        @include font(color(primary), font-size(m), font-weight(regular));
         text-align: right;
         width: 40%;
         @media print {
             width: 30%;
         }
     }
-    &__cap {
-        @include fonts(color(basic), font(s), font(regular));
+    &__caption {
+        @include font(color(basic), font-size(s), font-weight(regular));
         text-align: right;
         width: 40%;
         margin: 5px 10px;
@@ -248,8 +262,8 @@ body {
             width: 30%;
         }
     }
-    &__desc {
-        @include fonts(color(basic), font(s), font(light));
+    &__description {
+        @include font(color(basic), font-size(s), font-weight(light));
         text-align: left;
         width: 60%;
         @media print {
