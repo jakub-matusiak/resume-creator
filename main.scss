@@ -108,6 +108,7 @@ body {
 
 .button {
     @include font(color(primary), font-size(xs), font-weight(regular));
+    cursor: pointer;
     background: color(accent);
     text-transform: uppercase;
     border: 0;
@@ -129,6 +130,7 @@ body {
 
 %button-js {
     @include font(color(secondary), font-size(s), font-weight(regular));
+    cursor: pointer;
     background: none;
     border: 0;
     margin-left: 5px;
