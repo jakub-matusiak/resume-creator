@@ -24,51 +24,51 @@ form.addEventListener("submit", event => {
 /* Personal Details section start */
 
     if (personalDetails[1] && personalDetails[2]) {
-        const row = document.createElement("div");
+        const container = document.createElement("div");
         const paragraph = document.createElement("p");
-        template.appendChild(row);
-        row.classList.add("preview__container");
+        template.appendChild(container);
+        container.classList.add("preview__container");
         paragraph.classList.add("preview__heading--name");
         paragraph.textContent = `${personalDetails[1]} ${personalDetails[2]}`;
-        row.appendChild(paragraph);
+        container.appendChild(paragraph);
     }
 
     if (personalDetails[0]) {
-        const row = document.createElement("div");
+        const container = document.createElement("div");
         const paragraph = document.createElement("p");
-        template.appendChild(row);
-        row.classList.add("preview__container");
+        template.appendChild(container);
+        container.classList.add("preview__container");
         paragraph.classList.add("preview__heading--job-title");
         paragraph.textContent = personalDetails[0];
-        row.appendChild(paragraph);
+        container.appendChild(paragraph);
     }
 
     if (personalDetails[3]) {
-        const row = document.createElement("div");
-        const cap = document.createElement("div");
-        const desc = document.createElement("div");
-        template.appendChild(row);
-        row.classList.add("preview__container");
-        cap.classList.add("preview__caption");
-        cap.textContent = "E-mail:";
-        desc.classList.add("preview__description");
-        desc.textContent = personalDetails[3];
-        row.appendChild(cap);
-        row.appendChild(desc);
+        const container = document.createElement("div");
+        const caption = document.createElement("div");
+        const description = document.createElement("div");
+        template.appendChild(container);
+        container.classList.add("preview__container");
+        caption.classList.add("preview__caption");
+        caption.textContent = "E-mail:";
+        description.classList.add("preview__description");
+        description.textContent = personalDetails[3];
+        container.appendChild(caption);
+        container.appendChild(description);
     }
 
     if (personalDetails[4]) {
-        const row = document.createElement("div");
-        const cap = document.createElement("div");
-        const desc = document.createElement("div");
-        template.appendChild(row);
-        row.classList.add("preview__container");
-        cap.classList.add("preview__caption");
-        cap.textContent = "Phone:";
-        desc.classList.add("preview__description");
-        desc.textContent = personalDetails[4];
-        row.appendChild(cap);
-        row.appendChild(desc);
+        const container = document.createElement("div");
+        const caption = document.createElement("div");
+        const description = document.createElement("div");
+        template.appendChild(container);
+        container.classList.add("preview__container");
+        caption.classList.add("preview__caption");
+        caption.textContent = "Phone:";
+        description.classList.add("preview__description");
+        description.textContent = personalDetails[4];
+        container.appendChild(caption);
+        container.appendChild(description);
     }
 
 /* Personal Details section end */
@@ -76,17 +76,17 @@ form.addEventListener("submit", event => {
 /* Professional Summary section start */
 
     if (professionalSummary[0]) {
-        const row = document.createElement("div");
-        const cap = document.createElement("div");
-        const desc = document.createElement("div");
-        template.appendChild(row);
-        row.classList.add("preview__container");
-        cap.classList.add("preview__caption");
-        cap.textContent = "Professional Summary:";
-        desc.classList.add("preview__description");
-        desc.textContent = professionalSummary[0];
-        row.appendChild(cap);
-        row.appendChild(desc);
+        const container = document.createElement("div");
+        const caption = document.createElement("div");
+        const description = document.createElement("div");
+        template.appendChild(container);
+        container.classList.add("preview__container");
+        caption.classList.add("preview__caption");
+        caption.textContent = "Professional Summary:";
+        description.classList.add("preview__description");
+        description.textContent = professionalSummary[0];
+        container.appendChild(caption);
+        container.appendChild(description);
     }
 
 /* Professional Summary section end */
@@ -99,23 +99,23 @@ form.addEventListener("submit", event => {
 
     if (employment[0] && employment[1] && employment[2] && employment[3] && employment[4] && employment[5]) {
         for (let i = 0; i < employment.length; i += 6) {
-            const row = document.createElement("div");
-            const cap = document.createElement("div");
-            const desc = document.createElement("div");
+            const container = document.createElement("div");
+            const caption = document.createElement("div");
+            const description = document.createElement("div");
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
                 heading.classList.add("preview__heading");
                 heading.textContent = "Employment history:";
             }
-            template.appendChild(row);
-            row.classList.add("preview__container");
-            cap.classList.add("preview__caption");
-            cap.textContent = `${employment[i+2]} - ${employment[i+3]}`;
-            desc.classList.add("preview__description");
-            desc.textContent = `${employment[i]} at ${employment[i+1]}, ${employment[i+4]} - ${employment[i+5]}`;
-            row.appendChild(cap);
-            row.appendChild(desc);
+            template.appendChild(container);
+            container.classList.add("preview__container");
+            caption.classList.add("preview__caption");
+            caption.textContent = `${employment[i+2]} - ${employment[i+3]}`;
+            description.classList.add("preview__description");
+            description.textContent = `${employment[i]} at ${employment[i+1]}, ${employment[i+4]} - ${employment[i+5]}`;
+            container.appendChild(caption);
+            container.appendChild(description);
         }
     }
 
@@ -129,23 +129,23 @@ form.addEventListener("submit", event => {
 
     if (education[0] && education[1] && education[2] && education[3] && education[4]) {
         for (let i = 0; i < education.length; i += 5) {
-            const row = document.createElement("div");
-            const cap = document.createElement("div");
-            const desc = document.createElement("div");
+            const container = document.createElement("div");
+            const caption = document.createElement("div");
+            const description = document.createElement("div");
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
                 heading.classList.add("preview__heading");
                 heading.textContent = "Education:";
             }
-            template.appendChild(row);
-            row.classList.add("preview__container");
-            cap.classList.add("preview__caption");
-            cap.textContent = `${education[i+1]} - ${education[i+2]}`;
-            desc.classList.add("preview__description");
-            desc.textContent = `${education[i]}, ${education[i+3]} - ${education[i+4]}`;
-            row.appendChild(cap);
-            row.appendChild(desc);
+            template.appendChild(container);
+            container.classList.add("preview__container");
+            caption.classList.add("preview__caption");
+            caption.textContent = `${education[i+1]} - ${education[i+2]}`;
+            description.classList.add("preview__description");
+            description.textContent = `${education[i]}, ${education[i+3]} - ${education[i+4]}`;
+            container.appendChild(caption);
+            container.appendChild(description);
         }
     }
 
@@ -159,23 +159,23 @@ form.addEventListener("submit", event => {
 
     if (skills[0] && skills[1]) {
         for (let i = 0; i < skills.length; i += 2) {
-            const row = document.createElement("div");
-            const cap = document.createElement("div");
-            const desc = document.createElement("div");
+            const container = document.createElement("div");
+            const caption = document.createElement("div");
+            const description = document.createElement("div");
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
                 heading.classList.add("preview__heading");
                 heading.textContent = "Skills:";
             }
-            template.appendChild(row);
-            row.classList.add("preview__container");
-            cap.classList.add("preview__caption");
-            cap.textContent = skills[i];
-            desc.classList.add("preview__description");
-            desc.textContent = skills[i+1];
-            row.appendChild(cap);
-            row.appendChild(desc);
+            template.appendChild(container);
+            container.classList.add("preview__container");
+            caption.classList.add("preview__caption");
+            caption.textContent = skills[i];
+            description.classList.add("preview__description");
+            description.textContent = skills[i+1];
+            container.appendChild(caption);
+            container.appendChild(description);
         }
     }
 
@@ -189,23 +189,23 @@ form.addEventListener("submit", event => {
 
     if (links[0] && links[1]) {
         for (let i = 0; i < links.length; i += 2) {
-            const row = document.createElement("div");
-            const cap = document.createElement("div");
-            const desc = document.createElement("div");
+            const container = document.createElement("div");
+            const caption = document.createElement("div");
+            const description = document.createElement("div");
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
                 heading.classList.add("preview__heading");
                 heading.textContent = "Links:";
             }
-            template.appendChild(row);
-            row.classList.add("preview__container");
-            cap.classList.add("preview__caption");
-            cap.textContent = links[i];
-            desc.classList.add("preview__description");
-            desc.textContent = links[i+1];
-            row.appendChild(cap);
-            row.appendChild(desc);
+            template.appendChild(container);
+            container.classList.add("preview__container");
+            caption.classList.add("preview__caption");
+            caption.textContent = links[i];
+            description.classList.add("preview__description");
+            description.textContent = links[i+1];
+            container.appendChild(caption);
+            container.appendChild(description);
         }
     }
     
@@ -289,12 +289,12 @@ addEmploymentBtn.addEventListener("click", () => {
 });
 
 removeEmploymentBtn.addEventListener("click", () => {
-    const row = employmentFieldset.querySelectorAll(`.employment-${countEmployment}`);
+    const container = employmentFieldset.querySelectorAll(`.employment-${countEmployment}`);
 
     if (countEmployment > 1) {
-        employmentFieldset.removeChild(row[0]);
-        employmentFieldset.removeChild(row[1]);
-        employmentFieldset.removeChild(row[2]);
+        employmentFieldset.removeChild(container[0]);
+        employmentFieldset.removeChild(container[1]);
+        employmentFieldset.removeChild(container[2]);
         countEmployment--;
     }
 });
@@ -372,12 +372,12 @@ addEducationBtn.addEventListener("click", () => {
 });
 
 removeEducationBtn.addEventListener("click", () => {
-    const row = educationFieldset.querySelectorAll(`.education-${countEducation}`);
+    const container = educationFieldset.querySelectorAll(`.education-${countEducation}`);
 
     if (countEducation > 1) {
-        educationFieldset.removeChild(row[0]);
-        educationFieldset.removeChild(row[1]);
-        educationFieldset.removeChild(row[2]);
+        educationFieldset.removeChild(container[0]);
+        educationFieldset.removeChild(container[1]);
+        educationFieldset.removeChild(container[2]);
         countEducation--;
     }
 });
@@ -391,7 +391,7 @@ const addSkillBtn = document.getElementById("add-skill");
 const removeSkillBtn = document.getElementById("remove-skill");
 
 addSkillBtn.addEventListener("click", () => {
-    const row = document.createElement("div");
+    const container = document.createElement("div");
     const add = [];
     
     countSkills++;
@@ -413,8 +413,8 @@ addSkillBtn.addEventListener("click", () => {
         }
     }
 
-    row.classList.add("form__container");
-    row.classList.add(`skills-${countSkills}`);
+    container.classList.add("form__container");
+    container.classList.add(`skills-${countSkills}`);
     add[0].appendChild(add[1]);
     add[0].appendChild(add[2]);
     add[3].appendChild(add[4]);
@@ -426,16 +426,16 @@ addSkillBtn.addEventListener("click", () => {
     add[4].textContent = "Description:";
     add[5].setAttribute(`name`, `skill-description-${countSkills}`);
 
-    skillsFieldset.appendChild(row);
-    row.appendChild(add[0]);
-    row.appendChild(add[3]);
+    skillsFieldset.appendChild(container);
+    container.appendChild(add[0]);
+    container.appendChild(add[3]);
 });
 
 removeSkillBtn.addEventListener("click", () => {
-    const row = skillsFieldset.querySelector(`.skills-${countSkills}`);
+    const container = skillsFieldset.querySelector(`.skills-${countSkills}`);
 
     if (countSkills > 1) {
-        skillsFieldset.removeChild(row);
+        skillsFieldset.removeChild(container);
         countSkills--;
     }
 });
@@ -449,7 +449,7 @@ const addLinkBtn = document.getElementById("add-link");
 const removeLinkBtn = document.getElementById("remove-link");
 
 addLinkBtn.addEventListener("click", () => {
-    const row = document.createElement("div");
+    const container = document.createElement("div");
     const add = [];
     
     countLinks++;
@@ -463,8 +463,8 @@ addLinkBtn.addEventListener("click", () => {
         add[i+2].classList.add("form__input");
     }
 
-    row.classList.add("form__container");
-    row.classList.add(`links-${countLinks}`);
+    container.classList.add("form__container");
+    container.classList.add(`links-${countLinks}`);
     add[0].appendChild(add[1]);
     add[0].appendChild(add[2]);
     add[3].appendChild(add[4]);
@@ -477,16 +477,16 @@ addLinkBtn.addEventListener("click", () => {
     add[5].setAttribute(`name`, `link-${countLinks}`);
     add[5].setAttribute(`type`, `url`);
 
-    linksFieldset.appendChild(row);
-    row.appendChild(add[0]);
-    row.appendChild(add[3]);
+    linksFieldset.appendChild(container);
+    container.appendChild(add[0]);
+    container.appendChild(add[3]);
 });
 
 removeLinkBtn.addEventListener("click", () => {
-    const row = linksFieldset.querySelector(`.links-${countLinks}`);
+    const container = linksFieldset.querySelector(`.links-${countLinks}`);
 
     if (countLinks > 1) {
-        linksFieldset.removeChild(row);
+        linksFieldset.removeChild(container);
         countLinks--;
     }
 });
