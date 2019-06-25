@@ -475,7 +475,7 @@ addLinkBtn.addEventListener("click", () => {
     add[2].setAttribute(`type`, `text`);
     add[4].textContent = "Link:";
     add[5].setAttribute(`name`, `link-${countLinks}`);
-    add[5].setAttribute(`type`, `text`);
+    add[5].setAttribute(`type`, `url`);
 
     linksFieldset.appendChild(row);
     row.appendChild(add[0]);
