@@ -150,6 +150,10 @@ body {
         box-shadow: 0 0 15px rgba(0,0,0,.1);
         margin: 15px 20px;
         padding: 25px 0;
+        @media (max-width: 480px) {
+            min-width: 320px;
+            margin: 10px 0;
+        }
         &--icon {
             position: absolute;
             top: 7px;
@@ -160,9 +164,6 @@ body {
             position: absolute;
             bottom: 5px;
             right: 15px;
-        }
-        @media (max-width: 480px) {
-            margin: 15px 0;
         }
     }
     &__heading {
@@ -175,12 +176,20 @@ body {
         display: flex;
         margin: 0 5px;
         padding: 5px;
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
     }
     &__label {
         @include font(color(font), font-size(xs), font-weight(regular));
         width: 50%;
+        display: inline-block;
         margin: 0 5px;
         z-index: 1;
+        @media (max-width: 480px) {
+            width: 100%;
+            margin: 2px 0;
+        }
         &--photo {
             display: none;
         }
@@ -189,18 +198,28 @@ body {
         }
     }
     &__span {
-        display: inline-block;
+        display: block;
         width: 100%;
         margin-bottom: 2px;
     }
     &__input {
         width: 100%;
+        height: 20px;
+        margin: 0;
+        @media (max-width: 480px) {
+            height: 25px;
+        }
         &--photo {
             display: none;
         }
     }
     &__textarea {
         width: 100%;
+        height: 40px;
+        margin: 0;
+        @media (max-width: 480px) {
+            height: 50px;
+        }
     }
 }
 

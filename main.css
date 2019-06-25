@@ -132,6 +132,13 @@ body {
   padding: 25px 0;
 }
 
+@media (max-width: 480px) {
+  .resume-creator__fieldset {
+    min-width: 320px;
+    margin: 10px 0;
+  }
+}
+
 .resume-creator__fieldset--icon {
   position: absolute;
   top: 7px;
@@ -143,12 +150,6 @@ body {
   position: absolute;
   bottom: 5px;
   right: 15px;
-}
-
-@media (max-width: 480px) {
-  .resume-creator__fieldset {
-    margin: 15px 0;
-  }
 }
 
 .resume-creator__heading {
@@ -168,13 +169,30 @@ body {
   padding: 5px;
 }
 
+@media (max-width: 480px) {
+  .resume-creator__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .resume-creator__label {
   color: #D9DCD6;
   font-size: 0.8em;
   font-weight: 400;
   width: 50%;
+  display: inline-block;
   margin: 0 5px;
   z-index: 1;
+}
+
+@media (max-width: 480px) {
+  .resume-creator__label {
+    width: 100%;
+    margin: 2px 0;
+  }
 }
 
 .resume-creator__label--photo {
@@ -186,13 +204,21 @@ body {
 }
 
 .resume-creator__span {
-  display: inline-block;
+  display: block;
   width: 100%;
   margin-bottom: 2px;
 }
 
 .resume-creator__input {
   width: 100%;
+  height: 20px;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .resume-creator__input {
+    height: 25px;
+  }
 }
 
 .resume-creator__input--photo {
@@ -201,6 +227,14 @@ body {
 
 .resume-creator__textarea {
   width: 100%;
+  height: 40px;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .resume-creator__textarea {
+    height: 50px;
+  }
 }
 
 .resume-preview {
