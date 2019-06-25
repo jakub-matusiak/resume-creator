@@ -11,169 +11,169 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-    <header class="page-header">
-        <div class="page-header__container">
-            <h1 class="page-header__logo">Resume Creator</h1>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Resume Creator</h1>
         </div>
     </header>
-    <main class="page-content">
-        <section class="resume-creator">
-            <form class="resume-creator__form" id="form">
-                <fieldset class="resume-creator__fieldset">
-                    <legend class="resume-creator__heading">Personal Details</legend>
-                    <span class="resume-creator__fieldset--icon fas fa-address-card fa-2x"></span>
-                    <div class="resume-creator__row">
-                        <label class="resume-creator__label resume-creator__label--oneline">
-                            <span class="resume-creator__span">Job title:</span>
-                            <input type="text" class="resume-creator__input" name="job-title">
+    <main class="main">
+        <section class="creator">
+            <form class="form" id="form">
+                <fieldset class="form__fieldset">
+                    <legend class="form__heading">Personal Details</legend>
+                    <span class="form__icons fas fa-address-card fa-2x"></span>
+                    <div class="form__container">
+                        <label class="form__label form__label--oneline">
+                            <span class="form__span">Job title:</span>
+                            <input type="text" class="form__input" name="job-title">
                         </label>
-                        <label class="resume-creator__label resume-creator__label--photo">
-                            <span class="resume-creator__span">Upload photo:</span>
-                            <input type="file" class="resume-creator__input" id="upload-photo">
+                        <label class="form__label form__label--photo">
+                            <span class="form__span">Upload photo:</span>
+                            <input type="file" class="form__input" id="upload-photo">
                         </label>
-                        <input type="submit" class="resume-creator__input resume-creator__input--photo" name="submit-photo">
+                        <input type="submit" class="form__input form__input--photo" name="submit-photo">
                     </div>
-                    <div class="resume-creator__row">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">First name:</span>
-                            <input type="text" class="resume-creator__input" name="first-name">
+                    <div class="form__container">
+                        <label class="form__label">
+                            <span class="form__span">First name:</span>
+                            <input type="text" class="form__input" name="first-name">
                         </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Last name:</span>
-                            <input type="text" class="resume-creator__input" name="last-name">
-                        </label>
-                    </div>
-                    <div class="resume-creator__row">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">E-mail:</span>
-                            <input type="email" class="resume-creator__input" name="email">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Phone:</span>
-                            <input type="tel" class="resume-creator__input" name="phone">
+                        <label class="form__label">
+                            <span class="form__span">Last name:</span>
+                            <input type="text" class="form__input" name="last-name">
                         </label>
                     </div>
-                </fieldset>
-                <fieldset class="resume-creator__fieldset">
-                    <legend class="resume-creator__heading">Professional Summary</legend>
-                    <span class="resume-creator__fieldset--icon fas fa-user-edit fa-2x"></span>
-                    <div class="resume-creator__row">
-                        <label class="resume-creator__label resume-creator__label--oneline">
-                            <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="professional-summary"></textarea>
+                    <div class="form__container">
+                        <label class="form__label">
+                            <span class="form__span">E-mail:</span>
+                            <input type="email" class="form__input" name="email">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span">Phone:</span>
+                            <input type="tel" class="form__input" name="phone">
                         </label>
                     </div>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset" id="employment">
-                    <legend class="resume-creator__heading">Employment history</legend>
-                    <span class="resume-creator__fieldset--icon fas fa-business-time fa-2x"></span>
-                    <div class="resume-creator__row employment-1">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Workplace:</span>
-                            <input type="text" class="resume-creator__input" name="workplace-1">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Employer:</span>
-                            <input type="text" class="resume-creator__input" name="employer-1">
+                <fieldset class="form__fieldset">
+                    <legend class="form__heading">Professional Summary</legend>
+                    <span class="form__icons fas fa-user-edit fa-2x"></span>
+                    <div class="form__container">
+                        <label class="form__label form__label--oneline">
+                            <span class="form__span">Description:</span>
+                            <textarea class="form__textarea" name="professional-summary"></textarea>
                         </label>
                     </div>
-                    <div class="resume-creator__row employment-1">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Start date:</span>
-                            <input type="date" class="resume-creator__input" name="job-start-1">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">End date:</span>
-                            <input type="date" class="resume-creator__input" name="job-end-1">
-                        </label>
-                    </div>
-                    <div class="resume-creator__row employment-1">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">City:</span>
-                            <input type="text" class="resume-creator__input" name="job-city-1">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="job-description-1"></textarea>
-                        </label>
-                    </div>
-                    <span class="resume-creator__fieldset--buttons"><button class="button--add" id="add-employment" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-employment" type="button"><span class="fas fa-minus-circle"></span></button></span>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset" id="education">
-                    <legend class="resume-creator__heading">Education</legend>
-                    <span class="resume-creator__fieldset--icon fas fa-graduation-cap fa-2x"></span>
-                    <div class="resume-creator__row education-1">
-                        <label class="resume-creator__label resume-creator__label--oneline">
-                            <span class="resume-creator__span">School:</span>
-                            <input type="text" class="resume-creator__input" name="school-1">
+                <fieldset class="form__fieldset" id="employment">
+                    <legend class="form__heading">Employment history</legend>
+                    <span class="form__icons fas fa-business-time fa-2x"></span>
+                    <div class="form__container employment-1">
+                        <label class="form__label">
+                            <span class="form__span">Workplace:</span>
+                            <input type="text" class="form__input" name="workplace-1">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span">Employer:</span>
+                            <input type="text" class="form__input" name="employer-1">
                         </label>
                     </div>
-                    <div class="resume-creator__row education-1">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Start date:</span>
-                            <input type="date" class="resume-creator__input" name="school-start-1">
+                    <div class="form__container employment-1">
+                        <label class="form__label">
+                            <span class="form__span">Start date:</span>
+                            <input type="date" class="form__input" name="job-start-1">
                         </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">End date:</span>
-                            <input type="date" class="resume-creator__input" name="school-end-1">
-                        </label>
-                    </div>
-                    <div class="resume-creator__row education-1">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">City:</span>
-                            <input type="text" class="resume-creator__input" name="school-city-1">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="school-description-1"></textarea>
+                        <label class="form__label">
+                            <span class="form__span">End date:</span>
+                            <input type="date" class="form__input" name="job-end-1">
                         </label>
                     </div>
-                    <span class="resume-creator__fieldset--buttons"><button class="button--add" id="add-education" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-education" type="button"><span class="fas fa-minus-circle"></span></button></span>
+                    <div class="form__container employment-1">
+                        <label class="form__label">
+                            <span class="form__span">City:</span>
+                            <input type="text" class="form__input" name="job-city-1">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span">Description:</span>
+                            <textarea class="form__textarea" name="job-description-1"></textarea>
+                        </label>
+                    </div>
+                    <span class="form__buttons"><button class="button--add" id="add-employment" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-employment" type="button"><span class="fas fa-minus-circle"></span></button></span>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset" id="skills">
-                    <legend class="resume-creator__heading">Skills</legend>
-                    <span class="resume-creator__fieldset--icon fas fa-laptop-code fa-2x"></span>
-                    <div class="resume-creator__row skills-1">
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Skill:</span>
-                            <input type="text" class="resume-creator__input" name="skill-1">
-                        </label>
-                        <label class="resume-creator__label">
-                            <span class="resume-creator__span">Description:</span>
-                            <textarea class="resume-creator__textarea" name="skill-description-1"></textarea>
+                <fieldset class="form__fieldset" id="education">
+                    <legend class="form__heading">Education</legend>
+                    <span class="form__icons fas fa-graduation-cap fa-2x"></span>
+                    <div class="form__container education-1">
+                        <label class="form__label form__label--oneline">
+                            <span class="form__span">School:</span>
+                            <input type="text" class="form__input" name="school-1">
                         </label>
                     </div>
-                    <span class="resume-creator__fieldset--buttons"><button class="button--add" id="add-skill" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-skill" type="button"><span class="fas fa-minus-circle"></span></button></span>
+                    <div class="form__container education-1">
+                        <label class="form__label">
+                            <span class="form__span">Start date:</span>
+                            <input type="date" class="form__input" name="school-start-1">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span">End date:</span>
+                            <input type="date" class="form__input" name="school-end-1">
+                        </label>
+                    </div>
+                    <div class="form__container education-1">
+                        <label class="form__label">
+                            <span class="form__span">City:</span>
+                            <input type="text" class="form__input" name="school-city-1">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span">Description:</span>
+                            <textarea class="form__textarea" name="school-description-1"></textarea>
+                        </label>
+                    </div>
+                    <span class="form__buttons"><button class="button--add" id="add-education" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-education" type="button"><span class="fas fa-minus-circle"></span></button></span>
                 </fieldset>
-                <fieldset class="resume-creator__fieldset" id="links">
-                    <legend class="resume-creator__heading">Links</legend>
-                    <span class="resume-creator__fieldset--icon fas fa-link fa-2x"></span>
-                        <div class="resume-creator__row links-1">
-                            <label class="resume-creator__label">
-                                <span class="resume-creator__span">Label:</span>
-                                <input type="text" class="resume-creator__input" name="link-label-1">
+                <fieldset class="form__fieldset" id="skills">
+                    <legend class="form__heading">Skills</legend>
+                    <span class="form__icons fas fa-laptop-code fa-2x"></span>
+                    <div class="form__container skills-1">
+                        <label class="form__label">
+                            <span class="form__span">Skill:</span>
+                            <input type="text" class="form__input" name="skill-1">
+                        </label>
+                        <label class="form__label">
+                            <span class="form__span">Description:</span>
+                            <textarea class="form__textarea" name="skill-description-1"></textarea>
+                        </label>
+                    </div>
+                    <span class="form__buttons"><button class="button--add" id="add-skill" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-skill" type="button"><span class="fas fa-minus-circle"></span></button></span>
+                </fieldset>
+                <fieldset class="form__fieldset" id="links">
+                    <legend class="form__heading">Links</legend>
+                    <span class="form__icons fas fa-link fa-2x"></span>
+                        <div class="form__container links-1">
+                            <label class="form__label">
+                                <span class="form__span">Label:</span>
+                                <input type="text" class="form__input" name="link-label-1">
                             </label>
-                            <label class="resume-creator__label">
-                                <span class="resume-creator__span">Link:</span>
-                                <input type="url" class="resume-creator__input" name="link-1">
+                            <label class="form__label">
+                                <span class="form__span">Link:</span>
+                                <input type="url" class="form__input" name="link-1">
                             </label>
                         </div>
-                    <span class="resume-creator__fieldset--buttons"><button class="button--add" id="add-link" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-link" type="button"><span class="fas fa-minus-circle"></span></button></span>
+                    <span class="form__buttons"><button class="button--add" id="add-link" type="button"><span class="fas fa-plus-circle"></span></button><button class="button--remove" id="remove-link" type="button"><span class="fas fa-minus-circle"></span></button></span>
                 </fieldset>
-                <div class="button__container">
-                    <button class="button button--generate" type="submit">Generate</button>
+                <div class="form__button-container">
+                    <button class="button" type="submit">Generate</button>
                 </div>
             </form>
         </section>
-        <section class="resume-preview">
-            <h2 class="resume-preview__title">Resume preview</h2>
-            <div class="resume-preview__template" id="template"></div>
-            <button class="button button--print" id="print" type="button">Print</button>
+        <section class="preview">
+            <h2 class="preview__title">Resume preview</h2>
+            <div class="preview__template" id="template"></div>
+            <button class="button" id="print" type="button">Print</button>
         </section>
     </main>
-    <footer class="page-footer">
-        <div class="page-footer__container">
-            <p class="page-footer__author">Designed by Jakub Matusiak</p>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__author">Designed by Jakub Matusiak</p>
         </div>
     </footer>
 <script src="main.js" type="text/javascript"></script>

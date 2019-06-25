@@ -27,8 +27,8 @@ form.addEventListener("submit", event => {
         const row = document.createElement("div");
         const paragraph = document.createElement("p");
         template.appendChild(row);
-        row.classList.add("resume-preview__row");
-        paragraph.classList.add("resume-preview__heading--name");
+        row.classList.add("preview__container");
+        paragraph.classList.add("preview__heading--name");
         paragraph.textContent = `${personalDetails[1]} ${personalDetails[2]}`;
         row.appendChild(paragraph);
     }
@@ -37,8 +37,8 @@ form.addEventListener("submit", event => {
         const row = document.createElement("div");
         const paragraph = document.createElement("p");
         template.appendChild(row);
-        row.classList.add("resume-preview__row");
-        paragraph.classList.add("resume-preview__heading--job-title");
+        row.classList.add("preview__container");
+        paragraph.classList.add("preview__heading--job-title");
         paragraph.textContent = personalDetails[0];
         row.appendChild(paragraph);
     }
@@ -48,10 +48,10 @@ form.addEventListener("submit", event => {
         const cap = document.createElement("div");
         const desc = document.createElement("div");
         template.appendChild(row);
-        row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__caption");
+        row.classList.add("preview__container");
+        cap.classList.add("preview__caption");
         cap.textContent = "E-mail:";
-        desc.classList.add("resume-preview__description");
+        desc.classList.add("preview__description");
         desc.textContent = personalDetails[3];
         row.appendChild(cap);
         row.appendChild(desc);
@@ -62,10 +62,10 @@ form.addEventListener("submit", event => {
         const cap = document.createElement("div");
         const desc = document.createElement("div");
         template.appendChild(row);
-        row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__caption");
+        row.classList.add("preview__container");
+        cap.classList.add("preview__caption");
         cap.textContent = "Phone:";
-        desc.classList.add("resume-preview__description");
+        desc.classList.add("preview__description");
         desc.textContent = personalDetails[4];
         row.appendChild(cap);
         row.appendChild(desc);
@@ -80,10 +80,10 @@ form.addEventListener("submit", event => {
         const cap = document.createElement("div");
         const desc = document.createElement("div");
         template.appendChild(row);
-        row.classList.add("resume-preview__row");
-        cap.classList.add("resume-preview__caption");
+        row.classList.add("preview__container");
+        cap.classList.add("preview__caption");
         cap.textContent = "Professional Summary:";
-        desc.classList.add("resume-preview__description");
+        desc.classList.add("preview__description");
         desc.textContent = professionalSummary[0];
         row.appendChild(cap);
         row.appendChild(desc);
@@ -105,14 +105,14 @@ form.addEventListener("submit", event => {
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
-                heading.classList.add("resume-preview__heading");
+                heading.classList.add("preview__heading");
                 heading.textContent = "Employment history:";
             }
             template.appendChild(row);
-            row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__caption");
+            row.classList.add("preview__container");
+            cap.classList.add("preview__caption");
             cap.textContent = `${employment[i+2]} - ${employment[i+3]}`;
-            desc.classList.add("resume-preview__description");
+            desc.classList.add("preview__description");
             desc.textContent = `${employment[i]} at ${employment[i+1]}, ${employment[i+4]} - ${employment[i+5]}`;
             row.appendChild(cap);
             row.appendChild(desc);
@@ -135,14 +135,14 @@ form.addEventListener("submit", event => {
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
-                heading.classList.add("resume-preview__heading");
+                heading.classList.add("preview__heading");
                 heading.textContent = "Education:";
             }
             template.appendChild(row);
-            row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__caption");
+            row.classList.add("preview__container");
+            cap.classList.add("preview__caption");
             cap.textContent = `${education[i+1]} - ${education[i+2]}`;
-            desc.classList.add("resume-preview__description");
+            desc.classList.add("preview__description");
             desc.textContent = `${education[i]}, ${education[i+3]} - ${education[i+4]}`;
             row.appendChild(cap);
             row.appendChild(desc);
@@ -165,14 +165,14 @@ form.addEventListener("submit", event => {
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
-                heading.classList.add("resume-preview__heading");
+                heading.classList.add("preview__heading");
                 heading.textContent = "Skills:";
             }
             template.appendChild(row);
-            row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__caption");
+            row.classList.add("preview__container");
+            cap.classList.add("preview__caption");
             cap.textContent = skills[i];
-            desc.classList.add("resume-preview__description");
+            desc.classList.add("preview__description");
             desc.textContent = skills[i+1];
             row.appendChild(cap);
             row.appendChild(desc);
@@ -195,14 +195,14 @@ form.addEventListener("submit", event => {
             const heading = document.createElement("div");
             if (i == 0) {
                 template.appendChild(heading);
-                heading.classList.add("resume-preview__heading");
+                heading.classList.add("preview__heading");
                 heading.textContent = "Links:";
             }
             template.appendChild(row);
-            row.classList.add("resume-preview__row");
-            cap.classList.add("resume-preview__caption");
+            row.classList.add("preview__container");
+            cap.classList.add("preview__caption");
             cap.textContent = links[i];
-            desc.classList.add("resume-preview__description");
+            desc.classList.add("preview__description");
             desc.textContent = links[i+1];
             row.appendChild(cap);
             row.appendChild(desc);
@@ -227,7 +227,7 @@ addEmploymentBtn.addEventListener("click", () => {
     for (let i = 0; i <= 15; i += 3) {
         for (let j = 0; j <= 2; j++) {
             add[j] = document.createElement("div");
-            add[j].classList.add("resume-creator__row");
+            add[j].classList.add("form__container");
             add[j].classList.add(`employment-${countEmployment}`);
         }
         add[i+3] = document.createElement("label");
@@ -237,12 +237,12 @@ addEmploymentBtn.addEventListener("click", () => {
         } else {
             add[i+5] = document.createElement("textarea");
         }
-        add[i+3].classList.add("resume-creator__label");
-        add[i+4].classList.add("resume-creator__span");
+        add[i+3].classList.add("form__label");
+        add[i+4].classList.add("form__span");
         if (i <= 12) {
-            add[i+5].classList.add("resume-creator__input");
+            add[i+5].classList.add("form__input");
         } else {
-            add[i+5].classList.add("resume-creator__textarea");
+            add[i+5].classList.add("form__textarea");
         }
     }
 
@@ -315,7 +315,7 @@ addEducationBtn.addEventListener("click", () => {
     for (let i = 0; i <= 12; i += 3) {
         for (let j = 0; j <= 2; j++) {
             add[j] = document.createElement("div");
-            add[j].classList.add("resume-creator__row");
+            add[j].classList.add("form__container");
             add[j].classList.add(`education-${countEducation}`);
         }
         add[i+3] = document.createElement("label");
@@ -325,12 +325,12 @@ addEducationBtn.addEventListener("click", () => {
         } else {
             add[i+5] = document.createElement("textarea");
         }
-        add[i+3].classList.add("resume-creator__label");
-        add[i+4].classList.add("resume-creator__span");
+        add[i+3].classList.add("form__label");
+        add[i+4].classList.add("form__span");
         if (i <= 9) {
-            add[i+5].classList.add("resume-creator__input");
+            add[i+5].classList.add("form__input");
         } else {
-            add[i+5].classList.add("resume-creator__textarea");
+            add[i+5].classList.add("form__textarea");
         }
     }
 
@@ -338,7 +338,7 @@ addEducationBtn.addEventListener("click", () => {
     add[0].appendChild(add[3]);
     add[3].appendChild(add[4]);
     add[3].appendChild(add[5]);
-    add[3].classList.add("resume-creator__label--oneline");
+    add[3].classList.add("form__label--oneline");
     add[4].textContent = "School:";
     add[5].setAttribute(`name`, `school-${countEducation}`);
     add[5].setAttribute(`type`, `text`);
@@ -404,16 +404,16 @@ addSkillBtn.addEventListener("click", () => {
         } else {
             add[i+2] = document.createElement("textarea");
         }
-        add[i].classList.add("resume-creator__label");
-        add[i+1].classList.add("resume-creator__span");
+        add[i].classList.add("form__label");
+        add[i+1].classList.add("form__span");
         if (i == 0) {
-            add[i+2].classList.add("resume-creator__input");
+            add[i+2].classList.add("form__input");
         } else {
-            add[i+2].classList.add("resume-creator__textarea");
+            add[i+2].classList.add("form__textarea");
         }
     }
 
-    row.classList.add("resume-creator__row");
+    row.classList.add("form__container");
     row.classList.add(`skills-${countSkills}`);
     add[0].appendChild(add[1]);
     add[0].appendChild(add[2]);
@@ -458,12 +458,12 @@ addLinkBtn.addEventListener("click", () => {
         add[i] = document.createElement("label");
         add[i+1] = document.createElement("span");
         add[i+2] = document.createElement("input");
-        add[i].classList.add("resume-creator__label");
-        add[i+1].classList.add("resume-creator__span");
-        add[i+2].classList.add("resume-creator__input");
+        add[i].classList.add("form__label");
+        add[i+1].classList.add("form__span");
+        add[i+2].classList.add("form__input");
     }
 
-    row.classList.add("resume-creator__row");
+    row.classList.add("form__container");
     row.classList.add(`links-${countLinks}`);
     add[0].appendChild(add[1]);
     add[0].appendChild(add[2]);

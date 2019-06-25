@@ -68,7 +68,7 @@ body {
     }
 }
 
-.page-header {
+.header {
     @extend %item;
     @media print {
         display: none;
@@ -76,13 +76,13 @@ body {
     &__container {
         @extend %container;
     }
-    &__logo {
+    &__title {
         @include font(color(font), font-size(xxl), font-weight(regular));
         margin: 0;
     }
 }
 
-.page-footer {
+.footer {
     @extend %item;
     @media print {
         display: none;
@@ -96,7 +96,7 @@ body {
     }
 }
 
-.page-content {
+.main {
     display: flex;
     width: 1080px;
     margin: 0 auto;
@@ -116,9 +116,6 @@ body {
     padding: 5px 10px;
     @media print {
         display: none;
-    }
-    &__container {
-        text-align: center;
     }
     &--add {
         @extend %button-js;
@@ -145,6 +142,9 @@ body {
     @media print {
         display: none;
     }
+}
+
+.form {
     &__fieldset {
         position: relative;
         background: color(primary);
@@ -156,17 +156,17 @@ body {
             min-width: 320px;
             margin: 10px 0;
         }
-        &--icon {
-            position: absolute;
-            top: 7px;
-            right: 15px;
-            color: color(secondary);
-        }
-        &--buttons {
-            position: absolute;
-            bottom: 5px;
-            right: 15px;
-        }
+    }
+    &__icons {
+        position: absolute;
+        top: 7px;
+        right: 15px;
+        color: color(secondary);
+    }
+    &__buttons {
+        position: absolute;
+        bottom: 5px;
+        right: 15px;
     }
     &__heading {
         @include font(color(font), font-size(m), font-weight(regular));
@@ -174,7 +174,7 @@ body {
         top: 5px;
         left: 10px;
     }
-    &__row {
+    &__container {
         display: flex;
         margin: 0 5px;
         padding: 5px;
@@ -223,9 +223,12 @@ body {
             height: 50px;
         }
     }
+    &__button-container {
+        text-align: center;
+    }
 }
 
-.resume-preview {
+.preview {
     text-align: center;
     width: 60%;
     @media (max-width: 480px) {
@@ -253,15 +256,7 @@ body {
             display: none;
         }
     }
-    &__heading--name {
-        @include font(color(primary), font-size(xl), font-weight(regular));
-        margin: 0;
-    }
-    &__heading--job-title {
-        @include font(color(basic), font-size(s), font-weight(regular));
-        margin: 0;
-    }
-    &__row {
+    &__container {
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
@@ -272,6 +267,14 @@ body {
         width: 40%;
         @media print {
             width: 30%;
+        }
+        &--name {
+            @include font(color(primary), font-size(xl), font-weight(regular));
+            margin: 0;
+        }
+        &--job-title {
+            @include font(color(basic), font-size(s), font-weight(regular));
+            margin: 0;
         }
     }
     &__caption {

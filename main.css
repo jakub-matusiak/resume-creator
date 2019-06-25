@@ -13,12 +13,12 @@ body {
   background: #3A7CA5;
 }
 
-.page-header, .page-footer {
+.header, .footer {
   background: #16425B;
   width: 100%;
 }
 
-.page-header__container, .page-footer__container {
+.header__container, .footer__container {
   background: #16425B;
   width: 1080px;
   margin: 0 auto;
@@ -26,18 +26,18 @@ body {
 }
 
 @media (max-width: 480px) {
-  .page-header__container, .page-footer__container {
+  .header__container, .footer__container {
     width: 100%;
   }
 }
 
 @media print {
-  .page-header {
+  .header {
     display: none;
   }
 }
 
-.page-header__logo {
+.header__title {
   color: #D9DCD6;
   font-size: 2em;
   font-weight: 400;
@@ -45,19 +45,19 @@ body {
 }
 
 @media print {
-  .page-footer {
+  .footer {
     display: none;
   }
 }
 
-.page-footer__author {
+.footer__author {
   color: #D9DCD6;
   font-size: 0.8em;
   font-weight: 400;
   margin: 0;
 }
 
-.page-content {
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,7 +66,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .page-content {
+  .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -91,10 +91,6 @@ body {
   .button {
     display: none;
   }
-}
-
-.button__container {
-  text-align: center;
 }
 
 .button--add, .button--remove {
@@ -124,7 +120,7 @@ body {
   }
 }
 
-.resume-creator__fieldset {
+.form__fieldset {
   position: relative;
   background: #2F6690;
   border: 0;
@@ -135,26 +131,26 @@ body {
 }
 
 @media (max-width: 480px) {
-  .resume-creator__fieldset {
+  .form__fieldset {
     min-width: 320px;
     margin: 10px 0;
   }
 }
 
-.resume-creator__fieldset--icon {
+.form__icons {
   position: absolute;
   top: 7px;
   right: 15px;
   color: #16425B;
 }
 
-.resume-creator__fieldset--buttons {
+.form__buttons {
   position: absolute;
   bottom: 5px;
   right: 15px;
 }
 
-.resume-creator__heading {
+.form__heading {
   color: #D9DCD6;
   font-size: 1.2em;
   font-weight: 400;
@@ -163,7 +159,7 @@ body {
   left: 10px;
 }
 
-.resume-creator__row {
+.form__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +168,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .resume-creator__row {
+  .form__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -180,7 +176,7 @@ body {
   }
 }
 
-.resume-creator__label {
+.form__label {
   color: #D9DCD6;
   font-size: 0.8em;
   font-weight: 400;
@@ -191,72 +187,76 @@ body {
 }
 
 @media (max-width: 480px) {
-  .resume-creator__label {
+  .form__label {
     width: 100%;
     margin: 2px 0;
   }
 }
 
-.resume-creator__label--photo {
+.form__label--photo {
   display: none;
 }
 
-.resume-creator__label--oneline {
+.form__label--oneline {
   width: 100%;
 }
 
-.resume-creator__span {
+.form__span {
   display: block;
   width: 100%;
   margin-bottom: 2px;
 }
 
-.resume-creator__input {
+.form__input {
   width: 100%;
   height: 20px;
   margin: 0;
 }
 
 @media (max-width: 480px) {
-  .resume-creator__input {
+  .form__input {
     height: 25px;
   }
 }
 
-.resume-creator__input--photo {
+.form__input--photo {
   display: none;
 }
 
-.resume-creator__textarea {
+.form__textarea {
   width: 100%;
   height: 40px;
   margin: 0;
 }
 
 @media (max-width: 480px) {
-  .resume-creator__textarea {
+  .form__textarea {
     height: 50px;
   }
 }
 
-.resume-preview {
+.form__button-container {
+  text-align: center;
+}
+
+.preview {
   text-align: center;
   width: 60%;
 }
 
 @media (max-width: 480px) {
-  .resume-preview {
+  .preview {
     width: 100%;
   }
 }
 
 @media print {
-  .resume-preview {
+  .preview {
     width: 100%;
   }
 }
 
-.resume-preview__template {
+.preview__template {
   background: #FFFFFF;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -267,14 +267,14 @@ body {
 }
 
 @media print {
-  .resume-preview__template {
+  .preview__template {
     width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
 }
 
-.resume-preview__title {
+.preview__title {
   color: #D9DCD6;
   font-size: 1.2em;
   font-weight: 400;
@@ -282,26 +282,12 @@ body {
 }
 
 @media print {
-  .resume-preview__title {
+  .preview__title {
     display: none;
   }
 }
 
-.resume-preview__heading--name {
-  color: #2F6690;
-  font-size: 1.6em;
-  font-weight: 400;
-  margin: 0;
-}
-
-.resume-preview__heading--job-title {
-  color: #000000;
-  font-size: 1em;
-  font-weight: 400;
-  margin: 0;
-}
-
-.resume-preview__row {
+.preview__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +299,7 @@ body {
           align-items: baseline;
 }
 
-.resume-preview__heading {
+.preview__heading {
   color: #2F6690;
   font-size: 1.2em;
   font-weight: 400;
@@ -322,12 +308,26 @@ body {
 }
 
 @media print {
-  .resume-preview__heading {
+  .preview__heading {
     width: 30%;
   }
 }
 
-.resume-preview__caption {
+.preview__heading--name {
+  color: #2F6690;
+  font-size: 1.6em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.preview__heading--job-title {
+  color: #000000;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.preview__caption {
   color: #000000;
   font-size: 1em;
   font-weight: 400;
@@ -337,12 +337,12 @@ body {
 }
 
 @media print {
-  .resume-preview__caption {
+  .preview__caption {
     width: 30%;
   }
 }
 
-.resume-preview__description {
+.preview__description {
   color: #000000;
   font-size: 1em;
   font-weight: 200;
@@ -351,7 +351,7 @@ body {
 }
 
 @media print {
-  .resume-preview__description {
+  .preview__description {
     width: 70%;
   }
 }
