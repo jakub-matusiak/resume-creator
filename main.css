@@ -104,18 +104,18 @@ body {
   padding: 0;
 }
 
-.resume-creator {
+.creator {
   width: 40%;
 }
 
 @media (max-width: 480px) {
-  .resume-creator {
+  .creator {
     width: 100%;
   }
 }
 
 @media print {
-  .resume-creator {
+  .creator {
     display: none;
   }
 }
