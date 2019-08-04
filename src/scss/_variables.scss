@@ -1,0 +1,41 @@
+$colors: (
+    basic: #000000,
+    primary: #2F6690,
+    secondary: #16425B,
+    bg: #3A7CA5,
+    font: #D9DCD6,
+    accent: #81C3D7
+);
+
+$font-size: (
+    xs: .8em,
+    s: 1em,
+    m: 1.2em,
+    l: 1.4em,
+    xl: 1.6em,
+    xxl: 2em
+);
+
+$font-weight: (
+    light: 200,
+    regular: 400,
+    bold: 600
+);
+
+@function color($color) {
+    @return map-get($colors, $color)
+};
+
+@function font-size($font) {
+    @return map-get($font-size, $font)
+};
+
+@function font-weight($font) {
+    @return map-get($font-weight, $font)
+};
+
+@mixin font($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+};
